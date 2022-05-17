@@ -1,5 +1,6 @@
 .container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 .menuItem {
@@ -8,7 +9,7 @@
 	height: 30%;
 	text-align: center;
 	font-family: 'Gotham Rounded', sans-serif;
-	font-size: 3vw;
+	font-size: 2vw;
 	-webkit-transition: background-color 0.5s ease-out;
 	-moz-transition: background-color 0.5s ease-out;
 	-o-transition: background-color 0.5s ease-out;
@@ -22,6 +23,23 @@
 	background-color: #f2f1f0;
 	cursor: pointer;
 }
+.content {
+	width: 70%;
+	margin: auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .container {
+  	width: 100%;
+  	justify-content: center;
+  	align-items: center;
+  }
+  .content {
+  	width: 80%;
+  }
+  .menuItem {
+  	width: 100%;
+  }}
 
 @media screen and (max-width: 600px) {
   .container {
@@ -30,5 +48,11 @@
   	justify-content: center;
   	flex-wrap: wrap;
   	align-items: center;
+  }
+  .content {
+  	width: 100%;
+  }
+  .menuItem {
+  	width: 80%;
   }
 }
