@@ -391,8 +391,17 @@ a {
 
 
 /* Mobile device support - Changes flex to vertical scrolling and changes elements to be longer horizontally to be scrolled over in a list */
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+  .content {
+    width: 85%;
+  }
+}
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 800px) {
   .container {
   	width: 100%;
   	flex-direction: column;
