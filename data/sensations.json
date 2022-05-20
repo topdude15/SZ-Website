@@ -3,7 +3,7 @@
     "id": 0,
     "name": "Chocolate Conduction",
     "imagePath": "img/ChocolateConduction.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=0",
     "imageWidth": "70%",
     "divId": "chocCond"
   },
@@ -11,7 +11,7 @@
     "id": 1,
     "name": "Birthday Cake Capacitor",
     "imagePath": "img/BirthdayCakeCapacitor.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=1",
     "imageWidth": "70%",
     "divId": "bdayCake"
   },
@@ -19,7 +19,7 @@
     "id": 2,
     "name": "Bernoulli Brulee",
     "imagePath": "img/BernoulliBrulee.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=2",
     "imageWidth": "70%",
     "divId": "bernoulliBrulee"
   },
@@ -27,7 +27,7 @@
     "id": 3,
     "name": "Peanut Butter Bonds",
     "imagePath": "img/PeanutButterBonds.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=3",
     "imageWidth": "70%",
     "divId": "pbBonds"
   },
@@ -35,7 +35,7 @@
     "id": 4,
     "name": "Banana Cream Pi Bismuth",
     "imagePath": "img/BananaCreamPi.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=4",
     "imageWidth": "70%",
     "divId": "bananaCream"
   },
@@ -43,7 +43,7 @@
     "id": 5,
     "name": "Magnetic Mint",
     "imagePath": "img/MagneticMint.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=5",
     "imageWidth": "70%",
     "divId": "magneticMint"
   },
@@ -51,7 +51,7 @@
     "id": 6,
     "name": "Mass Mocha Madness",
     "imagePath": "img/MassMochaMadness.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=6",
     "imageWidth": "70%",
     "divId": "massMocha"
   },
@@ -59,7 +59,7 @@
     "id": 7,
     "name": "Tropical Turbine",
     "imagePath": "img/TropicalTurbine.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=7",
     "imageWidth": "70%",
     "divId": "tropicalTurbine"
   },
@@ -67,7 +67,7 @@
     "id": 8,
     "name": "Cherry Charge",
     "imagePath": "img/CherryCharge.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=8",
     "imageWidth": "70%",
     "divId": "cherryCharge"
   },
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Key Lime Voltage",
     "imagePath": "img/KeyLimeVoltage.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=9",
     "imageWidth": "70%",
     "divId": "keyLime"
   },
@@ -83,7 +83,7 @@
     "id": 10,
     "name": "Strawberry Sigma",
     "imagePath": "img/StrawberrySigma.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=10",
     "imageWidth": "70%",
     "divId": "strawberrySigma"
   },
@@ -91,7 +91,7 @@
     "id": 11,
     "name": "Citric Substance",
     "imagePath": "img/CitricSubstance.png",
-    "destination": "sensations.html",
+    "destination": "sensationInfo.html?sensId=11",
     "imageWidth": "70%",
     "divId": "citricSubstance"
   }
