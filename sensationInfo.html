@@ -8,11 +8,27 @@
 </head>
 
 <body onload="getSensationInfo()">
+	<div id = "navbar">
+		<!-- Will load navbar from navbar.html -->
+	</div>
 	<div class = "content">
-		<div id = "navbar">
-			<!-- Will load navbar from navbar.html -->
-		</div>
 		<div class = "container" id = "main">
+			<div class = "select">
+				<div class = "selectWrapper">
+					<select class = "selectNative js-selectNative">
+						<option>Original</option>
+						<option>Reduced Fat</option>
+					</select>
+
+					<div class = "selectCustom js-selectCustom" aria-hidden = "true">
+						<div class = "selectCustom-trigger">Select Base...</div>
+						<div class = "selectCustom-options">
+							<div class = "selectCustom-option">Original</div>
+							<div class = "selectCustom-option">Reduced Fat</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

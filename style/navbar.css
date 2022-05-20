@@ -1,5 +1,7 @@
 nav {
   padding: 0 15px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .menu,
 .submenu {
@@ -17,7 +19,9 @@ nav {
 }
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: #ccc;
+  color: #00a3e0;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
 }
 /* Mobile menu */
 .menu {
@@ -29,6 +33,8 @@ nav {
 .menu li a {
   display: block;
   padding: 10px 5px;
+  color: #171c8f;
+  font-family: 'Gotham Rounded', sans-serif;
 }
 .menu li.subitem a {
   padding: 15px;
@@ -123,7 +129,7 @@ nav {
   }
 }
 /* Desktop menu */
-@media all and (min-width: 960px) {
+@media all and (min-width: 1200px) {
   .menu {
     align-items: flex-start;
     flex-wrap: nowrap;

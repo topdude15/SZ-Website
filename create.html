@@ -1,4 +1,28 @@
 <html>
-<h1>Create Your Own</h1>
-<button onclick="history.back()">Go Back</button>
+<head>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/navbar.css">
+	<title>Sub Zero Ice Cream</title>
+	<style>@import url('http://fonts.cdnfonts.com/css/gotham-rounded');</style>
+	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>            
+</head>
+
+<!-- <body onload="createData('data/sensations.json')"> -->
+<body>
+	<div id = "navbar">
+		<!-- Navbar will be loaded from navbar.html -->
+	</div>
+	<div class = "content">
+		<div class = "container" id = "main">
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/script.js"></script> 
+	<script>
+		$(function() {
+			$("#navbar").load("navbar.html");
+		})
+	</script>  
+</body>
+
 </html>
