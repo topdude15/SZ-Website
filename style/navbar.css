@@ -129,6 +129,11 @@ nav {
   }
 }
 /* Desktop menu */
+@media all and (max-width: 1200px) {
+  .menu {
+    padding-top: 6%;
+  }
+}
 @media all and (min-width: 1200px) {
   .menu {
     align-items: flex-start;

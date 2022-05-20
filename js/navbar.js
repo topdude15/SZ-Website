@@ -7,10 +7,10 @@ const items = document.querySelectorAll(".item");
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars'></i>";
+    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars fa-4x'></i>";
   } else {
     menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-x'></i>";
+    toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-x fa-4x'></i>";
   }
 }
 
