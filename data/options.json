@@ -1,0 +1,4 @@
+{
+  "bases": ["Original", "Reduced Fat", "Custard", "Yogurt", "Lactose Free", "Keto", "Vegan"],
+  "sizes": ["Small", "Regular", "Large", "Pint"]
+}

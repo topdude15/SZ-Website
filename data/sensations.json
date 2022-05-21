@@ -5,6 +5,7 @@
     "imagePath": "img/ChocolateConduction.png",
     "destination": "sensationInfo.html?sensId=0",
     "imageWidth": "70%",
+    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "chocCond"
   },
   {

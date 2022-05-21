@@ -16,180 +16,65 @@ function createData(jsonFile) {
 }
 
 
-function loadSensation(sensId, jsonFile) {
+function loadSensation(sensId, sensationFile, optionsFile) {
   console.log("Loading sensation with ID of " + sensId);
 
-  $.getJSON(jsonFile, function(data) {
+  var sizes = [];
+  var bases = [];
+
+  $.getJSON(optionsFile, function(data) {
+  	for (const size of data["sizes"]) {
+  		sizes.push(size);
+  	}
+  	for (const base of data["bases"]) {
+  		bases.push(base);
+  	}
+  });
+
+  $.getJSON(sensationFile, function(data) {
     var obj = data.find(function(sensation, index) {
     	if (sensation.id == sensId) {
-    		createSensationInfo(data[index]);
+    		createSensationInfo(data[index], sizes, bases);
     	}
     })
   });
 }
 
-function createSensationInfo(sensData) {
+function createSensationInfo(sensData, sizes, bases) {
 	console.log(sensData);
+	console.log(bases);
   var tmp = '';
 
+  tmp += '<div class = "left">';
+  tmp += '<img src = "' + sensData.imagePath + '">';
+  tmp += '</div>';
+  tmp += '<div class = "right">';
   tmp += '<h1>' + sensData.name + '</h1>';
+  tmp += '<p>' + sensData.description + '</p>';
+  
+  // tmp += '<h1>Choose Your Size</h1>';
+  // tmp += '<div class = "select"> <div class = "selectWrapper"> <select class = "selectNative js-selectNative">';
+  // for (const size of sizes) {
+  // 	tmp += '<option>' + size + '</option>';
+  // }
+  // tmp += '</select><div class = "selectCustom js-selectCustom" aria-hidden = "true"> <div class = "selectCustom-trigger">Select Size...</div> <div class = "selectCustom-options">';
+  // for (const size of sizes) {
+  // 	tmp += '<div class = "selectCustom-option">' + size + "</div>";
+  // }
+  // tmp += '</div> </div> </div> </div>';
 
-  $('#main').prepend(tmp);
+  
+  // tmp += "<h1>Choose Your Base</h1>";
+  // tmp += '<div class = "select"> <div class = "selectWrapper"> <select class = "selectNative js-selectNative">';
+  // for (const base of bases) {
+  // 	tmp += '<option>' + base + '</option>';
+  // }
+  // tmp += '</select><div class = "selectCustom js-selectCustom" aria-hidden = "true"> <div class = "selectCustom-trigger">Select Base...</div> <div class = "selectCustom-options">';
+  // for (const base of bases) {
+  // 	tmp += '<div class = "selectCustom-option">' + base + '</div>';
+  // }
+  // tmp += '</div> </div> </div> </div>';
+  tmp += '</div>'
+
+  $('#sensationInfo').prepend(tmp);
 }
-
-
-
-const elSelectNative = document.getElementsByClassName("js-selectNative")[0];
-const elSelectCustom = document.getElementsByClassName("js-selectCustom")[0];
-const elSelectCustomBox = elSelectCustom.children[0];
-const elSelectCustomOpts = elSelectCustom.children[1];
-const customOptsList = Array.from(elSelectCustomOpts.children);
-const optionsCount = customOptsList.length;
-const defaultLabel = elSelectCustomBox.getAttribute("data-value");
-
-let optionChecked = "";
-let optionHoveredIndex = -1;
-
-// Toggle custom select visibility when clicking the box
-elSelectCustomBox.addEventListener("click", (e) => {
-  const isClosed = !elSelectCustom.classList.contains("isActive");
-
-  if (isClosed) {
-    openSelectCustom();
-  } else {
-    closeSelectCustom();
-  }
-});
-
-function openSelectCustom() {
-  elSelectCustom.classList.add("isActive");
-  // Remove aria-hidden in case this was opened by a user
-  // who uses AT (e.g. Screen Reader) and a mouse at the same time.
-  elSelectCustom.setAttribute("aria-hidden", false);
-
-  if (optionChecked) {
-    const optionCheckedIndex = customOptsList.findIndex(
-      (el) => el.getAttribute("data-value") === optionChecked
-    );
-    updateCustomSelectHovered(optionCheckedIndex);
-  }
-
-  // Add related event listeners
-  document.addEventListener("click", watchClickOutside);
-  document.addEventListener("keydown", supportKeyboardNavigation);
-}
-
-function closeSelectCustom() {
-  elSelectCustom.classList.remove("isActive");
-
-  elSelectCustom.setAttribute("aria-hidden", true);
-
-  updateCustomSelectHovered(-1);
-
-  // Remove related event listeners
-  document.removeEventListener("click", watchClickOutside);
-  document.removeEventListener("keydown", supportKeyboardNavigation);
-}
-
-function updateCustomSelectHovered(newIndex) {
-  const prevOption = elSelectCustomOpts.children[optionHoveredIndex];
-  const option = elSelectCustomOpts.children[newIndex];
-
-  if (prevOption) {
-    prevOption.classList.remove("isHover");
-  }
-  if (option) {
-    option.classList.add("isHover");
-  }
-
-  optionHoveredIndex = newIndex;
-}
-
-function updateCustomSelectChecked(value, text) {
-  const prevValue = optionChecked;
-
-  const elPrevOption = elSelectCustomOpts.querySelector(
-    `[data-value="${prevValue}"`
-  );
-  const elOption = elSelectCustomOpts.querySelector(`[data-value="${value}"`);
-
-  if (elPrevOption) {
-    elPrevOption.classList.remove("isActive");
-  }
-
-  if (elOption) {
-    elOption.classList.add("isActive");
-  }
-
-  elSelectCustomBox.textContent = text;
-  optionChecked = value;
-}
-
-function watchClickOutside(e) {
-  const didClickedOutside = !elSelectCustom.contains(event.target);
-  if (didClickedOutside) {
-    closeSelectCustom();
-  }
-}
-
-function supportKeyboardNavigation(e) {
-  // press down -> go next
-  if (event.keyCode === 40 && optionHoveredIndex < optionsCount - 1) {
-    let index = optionHoveredIndex;
-    e.preventDefault(); // prevent page scrolling
-    updateCustomSelectHovered(optionHoveredIndex + 1);
-  }
-
-  // press up -> go previous
-  if (event.keyCode === 38 && optionHoveredIndex > 0) {
-    e.preventDefault(); // prevent page scrolling
-    updateCustomSelectHovered(optionHoveredIndex - 1);
-  }
-
-  // press Enter or space -> select the option
-  if (event.keyCode === 13 || event.keyCode === 32) {
-    e.preventDefault();
-
-    const option = elSelectCustomOpts.children[optionHoveredIndex];
-    const value = option && option.getAttribute("data-value");
-
-    if (value) {
-      elSelectNative.value = value;
-      updateCustomSelectChecked(value, option.textContent);
-    }
-    closeSelectCustom();
-  }
-
-  // press ESC -> close selectCustom
-  if (event.keyCode === 27) {
-    closeSelectCustom();
-  }
-}
-
-// Update selectCustom value when selectNative is changed.
-elSelectNative.addEventListener("change", (e) => {
-  const value = e.target.value;
-  const elRespectiveCustomOption = elSelectCustomOpts.querySelectorAll(
-    `[data-value="${value}"]`
-  )[0];
-
-  updateCustomSelectChecked(value, elRespectiveCustomOption.textContent);
-});
-
-// Update selectCustom value when an option is clicked or hovered
-customOptsList.forEach(function (elOption, index) {
-  elOption.addEventListener("click", (e) => {
-    const value = e.target.getAttribute("data-value");
-
-    // Sync native select to have the same value
-    elSelectNative.value = value;
-    updateCustomSelectChecked(value, e.target.textContent);
-    closeSelectCustom();
-  });
-
-  elOption.addEventListener("mouseenter", (e) => {
-    updateCustomSelectHovered(index);
-  });
-
-  // TODO: Toggle these event listeners based on selectCustom visibility
-});
