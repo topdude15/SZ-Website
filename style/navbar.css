@@ -130,7 +130,7 @@ nav {
 /* Desktop menu */
 @media all and (max-width: 1200px) {
   .menu {
-    padding-top: 6%;
+    padding-top: 4%;
   }
   .logo img {
     width: 140%;
