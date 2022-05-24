@@ -94,6 +94,11 @@ nav {
     background: #ab2328;
     border-radius: 8px;
 }
+.menu li.button.secondary a {
+  color: #171c8f;
+  background: transparent;
+  border-color: #171c8f;
+}
 /* Tablet menu */
 @media all and (min-width: 700px) {
   .menu {

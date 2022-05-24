@@ -1,7 +1,9 @@
 function createData(jsonFile) {
+
 	$.getJSON(jsonFile, function(data) {
 
     var tmp = '';
+
 		$.each(data, function(key, value) {
 			tmp += '<a href = "' + value.destination + '" class = "menuItem">';
 			tmp += '	<div class = "orderItem" id = "' + value.divId + '">';
@@ -11,7 +13,7 @@ function createData(jsonFile) {
 			tmp += '</a>';
 		});
 
-		$('#main').prepend(tmp);
+		$('#main').append(tmp);
 	});
 }
 

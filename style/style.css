@@ -93,6 +93,17 @@ a {
 	margin-left: 37%;
 }
 
+.orderBar {
+	width: 100%;
+	background-color: white;
+	margin-top: 1%;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	padding: 1%;
+}
+.orderCart {
+	float: right;
+}
+
 /* Mobile device support - Changes flex to vertical scrolling and changes elements to be longer horizontally to be scrolled over in a list */
 @media screen and (max-width: 1500px) {
   .container {
