@@ -5,6 +5,9 @@
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/navbar.css">
 	
 </head>
 
@@ -15,7 +18,32 @@
 
 	<div class = "sensationContent">
 		<div class = "container" id = "sensationInfo">
+			<div class = "topLeftSensation" id = "topLeftSensation">
 
+			</div>
+			<div class = "topRightSensation" id = "topRightSensation">
+				<div id = "topRightSensationInfo">
+				</div>
+				<div id = "topRightSensationOptions">
+					<h1>Choose Your Size</h1>
+					<select class = "form-select form-select-lg mb-3" id = "topRightSensationSize">
+						<option selected disabled hidden>Select Your Size...</option>
+					</select>
+					<h1>Choose Your Base</h1>
+					<select class = "form-select form-select-lg mb-3" id = "topRightSensationBase">
+						<option selected disabled hidden>Select Your Base...</option>
+					</select>
+					<h1>Would you like a waffle bowl?</h1>
+						<div class = "btn-group btn-group-lg" role = "group">
+							<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleYes" autocomplete="off" checked>
+							<label class = "btn btn-outline-primary" for = "waffleYes">Yes</label>
+
+							<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleNo" autocomplete="off">
+							<label class = "btn btn-outline-primary" for = "waffleNo">No</label>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

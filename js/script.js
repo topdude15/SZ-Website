@@ -43,26 +43,21 @@ function loadSensation(sensId, sensationFile, optionsFile) {
 function createSensationInfo(sensData, sizes, bases) {
 	console.log(sensData);
 	console.log(sizes);
-  var tmp = '';
 
-  tmp += '<div class = "left">';
-  tmp += '<img src = "' + sensData.imagePath + '">';
-  tmp += '</div>';
-  tmp += '<div class = "right">';
-  tmp += '<h1>' + sensData.name + '</h1>';
-  tmp += '<p>' + sensData.description + '</p>';
-  
-  tmp += '<h1>Choose Your Size</h1>';
-  tmp += '<select class="form-select form-select-lg mb-3 sensationSelect">';
-  tmp += '<option selected hidden disabled>Choose your size...</option>';
-  for (const size of sizes) {
-    tmp += '<option value="' + size + '">' + size + '</option>';
+  document.getElementById('topLeftSensation').innerHTML = '<img src = "' + sensData.imagePath + '">';
+
+  document.getElementById('topRightSensationInfo').innerHTML += '<h1>' + sensData.name + '</h1>';
+  document.getElementById('topRightSensationInfo').innerHTML += '<p>' + sensData.description + '</p>';
+
+  topRightSensationSize = document.getElementById('topRightSensationSize');
+
+  for (var i = 0; i < sizes.length; i++) {
+    topRightSensationSize.innerHTML += '<option value="' + sizes[i] + '">' + sizes[i] + '</option>';
   }
-  tmp += '</select>';
 
-  tmp += '<link rel="stylesheet" href="style/style.css">';
-  tmp += '<link rel="stylesheet" href="style/navbar.css">';
+  topRightSensationBase = document.getElementById('topRightSensationBase');
 
-  $('#sensationInfo').prepend(tmp);
-
+  for (var i = 0; i < bases.length; i++) {
+    topRightSensationBase.innerHTML += '<option value = "' + bases[i] + '">' + bases[i] + '</option>';
+  }
 }

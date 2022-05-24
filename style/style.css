@@ -60,34 +60,37 @@ a {
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.left {
+.topLeftSensation {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
 }
-.left img {
+.topLeftSensation img {
 	object-fit: contain;
 }
-.right {
+.topRightSensation {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 60%;
 }
-.right h1 {
+.topRightSensation h1 {
 	font-size: 3vw;
 	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 	padding: 15px;
 }
-.right p {
+.topRightSensation p {
 	font-size: 2vw;
 }
 .sensationContent {
-	width: 75%;
+	width: 100%;
 	margin: auto;
 }
 .sensationSelect {
 	width: 75%;
+}
+.btn-group-lg {
+	margin-left: 37%;
 }
 
 /* Mobile device support - Changes flex to vertical scrolling and changes elements to be longer horizontally to be scrolled over in a list */
