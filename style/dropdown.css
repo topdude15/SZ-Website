@@ -9,7 +9,7 @@
 }
 
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: gray;
 }
 
 /* Style the arrow inside the select element: */
@@ -20,7 +20,7 @@
   right: 10px;
   width: 0;
   height: 0;
-  border: 6px solid transparent;
+  border: 3px solid transparent;
   border-color: #fff transparent transparent transparent;
 }
 
@@ -42,7 +42,7 @@
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: gray;
   top: 100%;
   left: 0;
   right: 0;

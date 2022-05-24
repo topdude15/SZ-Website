@@ -52,29 +52,28 @@ function createSensationInfo(sensData, sizes, bases) {
   tmp += '<h1>' + sensData.name + '</h1>';
   tmp += '<p>' + sensData.description + '</p>';
   
-  // tmp += '<h1>Choose Your Size</h1>';
-  // tmp += '<div class = "select"> <div class = "selectWrapper"> <select class = "selectNative js-selectNative">';
-  // for (const size of sizes) {
-  // 	tmp += '<option>' + size + '</option>';
-  // }
-  // tmp += '</select><div class = "selectCustom js-selectCustom" aria-hidden = "true"> <div class = "selectCustom-trigger">Select Size...</div> <div class = "selectCustom-options">';
-  // for (const size of sizes) {
-  // 	tmp += '<div class = "selectCustom-option">' + size + "</div>";
-  // }
-  // tmp += '</div> </div> </div> </div>';
+  tmp += '<h1>Choose Your Size</h1>';
+  tmp += '<div class="custom-select" style="width:80%;">';
+  tmp += '<select>';
+  tmp += '<option disabled hidden selected>Select your size...</option>';
+  for (const size of sizes) {
+    tmp += '<option value="' + size + '">' + size + '</option>';
+  }
+  tmp += '</select>';
+  tmp += '</div>';
 
-  
-  // tmp += "<h1>Choose Your Base</h1>";
-  // tmp += '<div class = "select"> <div class = "selectWrapper"> <select class = "selectNative js-selectNative">';
-  // for (const base of bases) {
-  // 	tmp += '<option>' + base + '</option>';
-  // }
-  // tmp += '</select><div class = "selectCustom js-selectCustom" aria-hidden = "true"> <div class = "selectCustom-trigger">Select Base...</div> <div class = "selectCustom-options">';
-  // for (const base of bases) {
-  // 	tmp += '<div class = "selectCustom-option">' + base + '</div>';
-  // }
-  // tmp += '</div> </div> </div> </div>';
-  tmp += '</div>'
+  tmp += '<h1>Choose Your Base</h1>';
+  tmp += '<div class="custom-select" style="width:80%;">';
+  tmp += '<select>';
+  tmp += '<option disabled hidden selected>Select your base...</option>';
+  for (const base of bases) {
+    tmp += '<option value="' + base + '">' + base + '</option>';
+  }
+  tmp += '</select>';
+  tmp += '</div>';
+
+  tmp += '<link rel="stylesheet" href="style/dropdown.css">';
+  tmp += '<script src="js/dropdown.js"></script>';
 
   $('#sensationInfo').prepend(tmp);
 }
