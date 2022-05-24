@@ -60,8 +60,9 @@ function createSensationInfo(sensData, sizes, bases) {
   }
   tmp += '</select>';
 
-  tmp += '<link rel="stylesheet" href="style/dropdown.css">';
-  tmp += '<script src="js/dropdown.js"></script>';
+  tmp += '<link rel="stylesheet" href="style/style.css">';
+  tmp += '<link rel="stylesheet" href="style/navbar.css">';
 
   $('#sensationInfo').prepend(tmp);
+
 }
