@@ -82,6 +82,13 @@ a {
 .right p {
 	font-size: 2vw;
 }
+.sensationContent {
+	width: 75%;
+	margin: auto;
+}
+.sensationSelect {
+	width: 75%;
+}
 
 /* Mobile device support - Changes flex to vertical scrolling and changes elements to be longer horizontally to be scrolled over in a list */
 @media screen and (max-width: 1500px) {
@@ -118,4 +125,8 @@ a {
   .orderItem p {
   	margin:  auto;
   }
+  .sensationSelect {
+	width: 100%;
+	}
+
 }

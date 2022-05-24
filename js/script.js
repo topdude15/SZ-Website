@@ -42,7 +42,7 @@ function loadSensation(sensId, sensationFile, optionsFile) {
 
 function createSensationInfo(sensData, sizes, bases) {
 	console.log(sensData);
-	console.log(bases);
+	console.log(sizes);
   var tmp = '';
 
   tmp += '<div class = "left">';
@@ -53,24 +53,12 @@ function createSensationInfo(sensData, sizes, bases) {
   tmp += '<p>' + sensData.description + '</p>';
   
   tmp += '<h1>Choose Your Size</h1>';
-  tmp += '<div class="custom-select" style="width:80%;">';
-  tmp += '<select>';
-  tmp += '<option disabled hidden selected>Select your size...</option>';
+  tmp += '<select class="form-select form-select-lg mb-3 sensationSelect">';
+  tmp += '<option selected hidden disabled>Choose your size...</option>';
   for (const size of sizes) {
     tmp += '<option value="' + size + '">' + size + '</option>';
   }
   tmp += '</select>';
-  tmp += '</div>';
-
-  tmp += '<h1>Choose Your Base</h1>';
-  tmp += '<div class="custom-select" style="width:80%;">';
-  tmp += '<select>';
-  tmp += '<option disabled hidden selected>Select your base...</option>';
-  for (const base of bases) {
-    tmp += '<option value="' + base + '">' + base + '</option>';
-  }
-  tmp += '</select>';
-  tmp += '</div>';
 
   tmp += '<link rel="stylesheet" href="style/dropdown.css">';
   tmp += '<script src="js/dropdown.js"></script>';
