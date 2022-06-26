@@ -94,7 +94,8 @@ a {
 }
 
 .orderBar {
-	width: 100%;
+	width: 94.9%;
+	margin: auto;
 	background-color: white;
 	margin-top: 1%;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -102,6 +103,9 @@ a {
 }
 .orderCart {
 	float: right;
+}
+.orderMenuText {
+	float: left;
 }
 
 /* Mobile device support - Changes flex to vertical scrolling and changes elements to be longer horizontally to be scrolled over in a list */

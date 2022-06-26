@@ -4,19 +4,18 @@ function createData(jsonFile) {
 
     var tmp = '';
 
-		$.each(data, function(key, value) {
-			tmp += '<a href = "' + value.destination + '" class = "menuItem">';
-			tmp += '	<div class = "orderItem" id = "' + value.divId + '">';
-			tmp += '		<img src="' + value.imagePath + '" width = "' + value.imageWidth + '">';
-			tmp += '		<p>' + value.name + '</p>';
-			tmp += '</div>';
-			tmp += '</a>';
-		});
+    $.each(data, function(key ,value) {
+     tmp += '<a href = "' + value.destination + '" class = "menuItem">';
+     tmp += '	<div class = "orderItem" id = "' + value.divId + '">';
+     tmp += '		<img src="' + value.imagePath + '" width = "' + value.imageWidth + '">';
+     tmp += '		<p>' + value.name + '</p>';
+     tmp += '</div>';
+     tmp += '</a>';
+   });
 
-		$('#main').append(tmp);
-	});
+    $('#main').append(tmp);
+  });
 }
-
 
 function loadSensation(sensId, sensationFile, optionsFile) {
   console.log("Loading sensation with ID of " + sensId);
@@ -43,8 +42,6 @@ function loadSensation(sensId, sensationFile, optionsFile) {
 }
 
 function createSensationInfo(sensData, sizes, bases) {
-	console.log(sensData);
-	console.log(sizes);
 
   document.getElementById('topLeftSensation').innerHTML = '<img src = "' + sensData.imagePath + '">';
 

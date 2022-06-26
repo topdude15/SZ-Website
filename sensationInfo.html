@@ -26,39 +26,45 @@
 				</div>
 				<div id = "topRightSensationOptions">
 					<h1>Choose Your Size</h1>
-					<select class = "form-select form-select-lg mb-3" id = "topRightSensationSize">
+					<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationSize" name = "topRightSnesationSize">
 						<option selected disabled hidden>Select Your Size...</option>
 					</select>
 					<h1>Choose Your Base</h1>
-					<select class = "form-select form-select-lg mb-3" id = "topRightSensationBase">
+					<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationBase" name = "topRightSensationBase">
 						<option selected disabled hidden>Select Your Base...</option>
 					</select>
 					<h1>Would you like a waffle bowl?</h1>
-						<div class = "btn-group btn-group-lg" role = "group">
-							<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleYes" autocomplete="off" checked>
-							<label class = "btn btn-outline-primary" for = "waffleYes">Yes</label>
+					<div class = "btn-group btn-group-lg" role = "group">
+						<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleYes" autocomplete="off" checked>
+						<label class = "btn btn-outline-primary" for = "waffleYes">Yes</label>
 
-							<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleNo" autocomplete="off">
-							<label class = "btn btn-outline-primary" for = "waffleNo">No</label>
-						</div>
+						<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleNo" autocomplete="off">
+						<label class = "btn btn-outline-primary" for = "waffleNo">No</label>
 					</div>
+					<br>
+					<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
+					<button id="deleteOrderButton">Delete Order</button>
+					<br>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/script.js"></script> 
-	<script>
-		function getSensationInfo() {
-			let params = (new URL(document.location)).searchParams;
-			let sensId = params.get("sensId");
-			loadSensation(sensId, 'data/sensations.json', 'data/options.json');
-		}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/sensationPage.js"></script>
+<script src="js/shoppingCart.js"></script>
+<script>
+	function getSensationInfo() {
+		let params = (new URL(document.location)).searchParams;
+		let sensId = params.get("sensId");
+		loadSensation(sensId, 'data/sensations.json', 'data/options.json');
+	}
 
-		$(function() {
-			$("#navbar").load("navbar.html");
-		})
-	</script>
+	$(function() {
+		$("#navbar").load("navbar.html");
+	})
+</script>
 </body>
 
 </html>

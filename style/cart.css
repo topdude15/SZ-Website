@@ -1,0 +1,14 @@
+.cartItem {
+	width: 100%;
+	background-color: white;
+	margin: 2%;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cartImg {
+	width: 20%;
+	display: block;
+	float: left;
+}
+.cartTitle {
+	font-size: 3vw;
+}
