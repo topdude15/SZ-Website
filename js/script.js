@@ -60,3 +60,8 @@ function createSensationInfo(sensData, sizes, bases) {
     topRightSensationBase.innerHTML += '<option value = "' + bases[i] + '">' + bases[i] + '</option>';
   }
 }
+
+function updateCartNumber() {
+  let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
+  document.getElementById("orderSizeLabel").innerHTML = currentOrder.orderItems.length;
+}

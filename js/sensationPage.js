@@ -33,7 +33,8 @@ function addToOrder() {
         }
       }
     })
-    updateShoppingCart()
+    updateShoppingCart();
+    updateCartNumber();
   })
 }
 

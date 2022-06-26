@@ -16,6 +16,11 @@
 		<!-- Will load navbar from navbar.html -->
 	</div>
 
+	<div class = "container" id = "main">
+		<div class = "orderBar" id = "orderBar">
+		</div>
+	</div>
+
 	<div class = "sensationContent">
 		<div class = "container" id = "sensationInfo">
 			<div class = "topLeftSensation" id = "topLeftSensation">
@@ -63,6 +68,7 @@
 
 	$(function() {
 		$("#navbar").load("navbar.html");
+		$("#orderBar").load("cartBar.html");
 	})
 </script>
 </body>
