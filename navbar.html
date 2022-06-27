@@ -8,9 +8,24 @@
 		<li class = "item"><a href="#">ABOUT US</a></li>
 		<li class = "item"><a href="#">CONTACT US</a></li>
 		<li class = "item button order"><a href = "order.html">ORDER NOW</a></li>
-		<li class = "item button secondary"><a href = "#">FIND A LOCATION</a></li>
+		<li class = "item button secondary"><a href = "#popup1">FIND A LOCATION</a></li>
 		<li class = "toggle"><a href="#"><i class="fa-solid fa-bars fa-4x"></i></a></li>
 	</ul>
 </nav>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="popupContent">
+			<div style="width: 100%; height: 100%">
+				<div id="storelocatorwidget" style="width:100%;height:100%"><p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p></div>
+				<script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl.js"></script>
+				<script type="text/javascript" id="storelocatorscript" data-uid="VOQvY4l4F49S4ZcKUlCl00YEWOWrbC76" data-lat="39.070396" data-lng="-100.252082" data-zoom="3.31" data-platform="MapTiler" src="//cdn.storelocatorwidgets.com/widget/widget.js"></script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<link rel="stylesheet" href="style/popup.css">
 
 <script src="js/navbar.js"></script>
