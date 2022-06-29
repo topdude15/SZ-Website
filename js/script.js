@@ -5,9 +5,9 @@ function createData(jsonFile) {
     var tmp = '';
 
     $.each(data, function(key ,value) {
-     tmp += '<a href = "' + value.destination + '" class = "menuItem">';
+     tmp += '<a href = "/pages/' + value.destination + '" class = "menuItem">';
      tmp += '	<div class = "orderItem" id = "' + value.divId + '">';
-     tmp += '		<img src="' + value.imagePath + '" width = "' + value.imageWidth + '">';
+     tmp += '		<img src="../' + value.imagePath + '" width = "' + value.imageWidth + '">';
      tmp += '		<p>' + value.name + '</p>';
      tmp += '</div>';
      tmp += '</a>';
@@ -43,7 +43,7 @@ function loadSensation(sensId, sensationFile, optionsFile) {
 
 function createSensationInfo(sensData, sizes, bases) {
 
-  document.getElementById('topLeftSensation').innerHTML = '<img src = "' + sensData.imagePath + '">';
+  document.getElementById('topLeftSensation').innerHTML = '<img src = "../' + sensData.imagePath + '">';
 
   document.getElementById('topRightSensationInfo').innerHTML += '<h1>' + sensData.name + '</h1>';
   document.getElementById('topRightSensationInfo').innerHTML += '<p>' + sensData.description + '</p>';
@@ -59,6 +59,7 @@ function createSensationInfo(sensData, sizes, bases) {
   for (var i = 0; i < bases.length; i++) {
     topRightSensationBase.innerHTML += '<option value = "' + bases[i] + '">' + bases[i] + '</option>';
   }
+  topRightSensationSize.contentWindows.location.reload(true);
 }
 
 function updateCartNumber() {
