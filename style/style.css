@@ -95,7 +95,6 @@ a {
 .btn-group-lg {
 	margin-left: 37%;
 }
-
 .orderBar {
 	width: 94.9%;
 	margin: auto;
@@ -111,7 +110,7 @@ a {
 	float: left;
 	line-height: 60px;
 	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
-	font-size: 5vh;
+	font-size: 3vh;
 }
 .orderSizeLabel {
 	float: right;
@@ -131,7 +130,7 @@ a {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .container {
   	width: 100%;
   	flex-direction: column;
@@ -145,6 +144,9 @@ a {
   .menuItem {
   	border-radius: 10px;
   	width: 80%;
+  }
+  .orderBar {
+  	border-radius: 10px	;
   }
   .orderItem {
   	display:  flex;

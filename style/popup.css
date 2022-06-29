@@ -55,11 +55,9 @@
   text-decoration: none;
   color: #333;
 }
-.popup .close:hover {
-  color: #06D85F;
-}
 .popup .popupContent {
 /*  max-height: 30%;*/
+  padding-top: 4%;
   overflow: auto;
 }
 
