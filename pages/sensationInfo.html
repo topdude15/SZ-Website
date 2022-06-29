@@ -24,7 +24,6 @@
 	<div class = "sensationContent">
 		<div class = "container" id = "sensationInfo">
 			<div class = "topLeftSensation" id = "topLeftSensation">
-
 			</div>
 			<div class = "topRightSensation" id = "topRightSensation">
 				<div id = "topRightSensationInfo">
@@ -39,12 +38,11 @@
 						<option selected disabled hidden>Select Your Base...</option>
 					</select>
 					<h1>Would you like a waffle bowl?</h1>
-					<div class = "btn-group btn-group-lg" role = "group">
-						<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleYes" autocomplete="off" checked>
-						<label class = "btn btn-outline-primary" for = "waffleYes">Yes</label>
-
-						<input type = "radio" class = "btn-check" name = "waffleRadio" id = "waffleNo" autocomplete="off">
-						<label class = "btn btn-outline-primary" for = "waffleNo">No</label>
+					<div id = "waffleSelect">
+						<input id = "waffle-yes" name = "waffle" type="radio" checked>
+						<label for = "waffle-yes">Yes</label>
+						<input id = "waffle-no" name = "waffle" type= "radio">
+						<label for = "waffle-no">No</label>
 					</div>
 					<br>
 					<button type = "button" id="addToOrderButton" disabled> Add to Order</button>

@@ -162,3 +162,33 @@ a {
 	width: 100%;
 	}
 }
+
+
+/* Code for radio buttons for waffle input on sensationInfo.html page */
+input[type="radio"] {
+	display: none;
+}
+label {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 45%;
+	border: 1px solid white;
+	text-align: center;
+	border-radius: 10px;
+	margin: 5px;
+	display: inline-block;
+}
+input[type="radio"]:checked + label {
+	background-color: darkblue;
+	cursor: default;
+	color: white;
+}
+input[type="radio"]:not(:checked)+label:hover {
+	border: 1px solid darkblue;
+}
+.waffleSelect {
+	width: 100%;
+}
+.waffleSelect input[type="radio"] {
+	margin: auto;
+}

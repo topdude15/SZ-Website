@@ -148,7 +148,7 @@ nav {
   }
 }
 /* Desktop menu */
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1460px) {
   .menu {
     align-items: flex-start;
     flex-wrap: nowrap;
