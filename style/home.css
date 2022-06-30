@@ -1,0 +1,48 @@
+.homeContent {
+	display: flex;
+	position: relative;
+	width: 100%;
+	background-color: #ab2328;
+	min-height: 780px;
+}
+.homeContent img {
+	max-width: 70%;
+	object-fit: contain;
+}
+.mainLeft {
+	display: flex;
+	justify-content: center;
+	width: 40%;
+}
+.mainLeft h1 {
+	margin: auto;
+	font-size: 5vh;
+	color: white;
+}
+.mainRight {
+	display: flex;
+	justify-content: center;
+	width: 60%;
+}
+
+/* Code for wave at bottom of main section */
+.custom-shape-divider-bottom-1656567268 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1656567268 svg {
+	position: relative;
+	display: block;
+	width: calc(111% + 1.3px);
+	height: 56px;
+}
+
+.custom-shape-divider-bottom-1656567268 .shape-fill {
+	fill: #FFFFFF;
+}

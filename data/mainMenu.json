@@ -22,7 +22,7 @@
   },
   {
     "name": "Pies",
-    "imagePath": "img/TropicalTurbine.png",
+    "imagePath": "img/Pie.png",
     "destination": "pie.html",
     "imageWidth": "70%",
     "divId": "pie"
