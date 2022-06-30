@@ -7,9 +7,6 @@ nav {
 .submenu {
   list-style-type: none;
 }
-/*.logo {
-  padding: 7.5px 20px 7.5px 0;
-}*/
 .item {
   padding: 10px;
 }
@@ -136,7 +133,7 @@ nav {
     text-decoration: none;
   }
   .button:not(.secondary) a:hover {
-    background: #651c32;
+    background:   ;
   }
 }
 @media all and (max-width: 800px) {
@@ -181,10 +178,13 @@ nav {
   }
   .menu li a {
     display: block;
-    padding: 35px 5px;
+    padding: 30px 5px;
   }
   .menu li a.imageLink {
     padding: 0;
+  }
+  img {
+    vertical-align: middle;
   }
   .item.button {
     width: auto;

@@ -14,7 +14,7 @@ function loadShoppingCart() {
         if (currentOrder.orderItems[i].itemType == "sensation") {
           if (sensation.id == currentOrder.orderItems[i].sensationId) {
             tmp += '<div class = "cartItem">';
-            tmp += '<img class = "cartImg" src = "' + sensation.imagePath + '">';
+            tmp += '<img class = "cartImg" src = "../' + sensation.imagePath + '">';
             tmp += '<p class = "cartTitle">' + sensation.name + '</p>';
             tmp += '<p class = "cartSubtitle">Size: ' + currentOrder.orderItems[i].itemSize + '</p>';
             tmp += '<p class = "cartSubtitle">Base: ' + currentOrder.orderItems[i].itemBase + '</p>';

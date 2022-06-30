@@ -13,7 +13,6 @@ body {
   background-image:  url('../img/clouds.png');
 	background-size: cover;
   background-repeat: no-repeat;
-/*	background-color: #99d6ea;*/
 }
 a {
   color: black;
@@ -24,6 +23,8 @@ a {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-top: 20px;
+	padding-left: 0;
+	padding-right: 0;
 }
 .menuItem {
 	background-color: white;
@@ -54,8 +55,8 @@ a {
 .orderItem img {
   object-fit: contain;
 }
-
 #sensationInfo {
+	width: 79%;
 	margin: auto;
 	margin-top: 20px;
 	display: flex;
@@ -78,12 +79,19 @@ a {
 	width: 60%;
 }
 .topRightSensation h1 {
-	font-size: 3vw;
+	text-align: center;
+	font-size: 5vh;
 	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 	padding: 15px;
 }
+.topRightSensation h2 {
+	text-align: center;
+	font-size: 4vh;
+	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+}
 .topRightSensation p {
-	font-size: 2vw;
+	font-size: 2.5vh;
+	font-family:  'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 }
 .sensationContent {
 	width: 100%;
@@ -96,12 +104,11 @@ a {
 	margin-left: 37%;
 }
 .orderBar {
-	width: 94.9%;
-	margin: auto;
+	width: 95%;
+	padding: 1%;
 	background-color: white;
 	margin-top: 1%;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	padding: 1%;
 }
 .orderCart {
 	float: right;
@@ -109,7 +116,7 @@ a {
 .orderMenuText {
 	float: left;
 	line-height: 60px;
-	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+	font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 	font-size: 3vh;
 }
 .orderSizeLabel {
@@ -161,6 +168,9 @@ a {
   .sensationSelect {
 	width: 100%;
 	}
+	.topRightSensation {
+		width: 90%;
+	}
 }
 
 
@@ -171,7 +181,7 @@ input[type="radio"] {
 label {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 45%;
+	width: 47%;
 	border: 1px solid white;
 	text-align: center;
 	border-radius: 10px;
@@ -179,7 +189,7 @@ label {
 	display: inline-block;
 }
 input[type="radio"]:checked + label {
-	background-color: darkblue;
+	background-color: #00a3e0;
 	cursor: default;
 	color: white;
 }
@@ -187,8 +197,25 @@ input[type="radio"]:not(:checked)+label:hover {
 	border: 1px solid darkblue;
 }
 .waffleSelect {
-	width: 100%;
+	margin: auto;
+	justify-content: center;
 }
 .waffleSelect input[type="radio"] {
 	margin: auto;
+}
+
+/* Code for 'Add to Order' button on sensationInfo.html page, should reuse for create.html */
+
+#addToOrderButton {
+	font-size: 30px;
+	padding: 2%;
+	width: 100%;
+	border: none;
+	background-color: #00a3e0;
+	color: white;
+	border-radius: 10px;
+}
+#addToOrderButton:disabled {
+	background-color: #171c8f;
+	color: gray;
 }

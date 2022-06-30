@@ -1,8 +1,8 @@
 var orderButton = document.getElementById("addToOrderButton");
 orderButton.addEventListener("click", addToOrder);
 
-var deleteButton = document.getElementById("deleteOrderButton");
-deleteButton.addEventListener("click", clearOrder);
+// var deleteButton = document.getElementById("deleteOrderButton");
+// deleteButton.addEventListener("click", clearOrder);
 
 function addToOrder() {
 
