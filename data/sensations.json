@@ -3,7 +3,7 @@
     "id": 0,
     "name": "Chocolate Conduction",
     "imagePath": "img/ChocolateConduction.png",
-    "destination": "sensationInfo.html?sensId=0",
+    "destination": "sensationInfo.php?sensId=0",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "chocCond"
@@ -12,7 +12,7 @@
     "id": 1,
     "name": "Birthday Cake Capacitor",
     "imagePath": "img/BirthdayCakeCapacitor.png",
-    "destination": "sensationInfo.html?sensId=1",
+    "destination": "sensationInfo.php?sensId=1",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bdayCake"
@@ -21,7 +21,7 @@
     "id": 2,
     "name": "Bernoulli Brulee",
     "imagePath": "img/BernoulliBrulee.png",
-    "destination": "sensationInfo.html?sensId=2",
+    "destination": "sensationInfo.php?sensId=2",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bernoulliBrulee"
@@ -30,7 +30,7 @@
     "id": 3,
     "name": "Peanut Butter Bonds",
     "imagePath": "img/PeanutButterBonds.png",
-    "destination": "sensationInfo.html?sensId=3",
+    "destination": "sensationInfo.php?sensId=3",
     "imageWidth": "70%",
     "divId": "pbBonds",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in."
@@ -39,7 +39,7 @@
     "id": 4,
     "name": "Banana Cream Pi Bismuth",
     "imagePath": "img/BananaCreamPi.png",
-    "destination": "sensationInfo.html?sensId=4",
+    "destination": "sensationInfo.php?sensId=4",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bananaCream"
@@ -48,7 +48,7 @@
     "id": 5,
     "name": "Magnetic Mint",
     "imagePath": "img/MagneticMint.png",
-    "destination": "sensationInfo.html?sensId=5",
+    "destination": "sensationInfo.php?sensId=5",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "magneticMint"
@@ -57,7 +57,7 @@
     "id": 6,
     "name": "Mass Mocha Madness",
     "imagePath": "img/MassMochaMadness.png",
-    "destination": "sensationInfo.html?sensId=6",
+    "destination": "sensationInfo.php?sensId=6",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "massMocha"
@@ -66,7 +66,7 @@
     "id": 7,
     "name": "Tropical Turbine",
     "imagePath": "img/TropicalTurbine.png",
-    "destination": "sensationInfo.html?sensId=7",
+    "destination": "sensationInfo.php?sensId=7",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "tropicalTurbine"
@@ -75,7 +75,7 @@
     "id": 8,
     "name": "Cherry Charge",
     "imagePath": "img/CherryCharge.png",
-    "destination": "sensationInfo.html?sensId=8",
+    "destination": "sensationInfo.php?sensId=8",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "cherryCharge"
@@ -84,7 +84,7 @@
     "id": 9,
     "name": "Key Lime Voltage",
     "imagePath": "img/KeyLimeVoltage.png",
-    "destination": "sensationInfo.html?sensId=9",
+    "destination": "sensationInfo.php?sensId=9",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "keyLime"
@@ -93,7 +93,7 @@
     "id": 10,
     "name": "Strawberry Sigma",
     "imagePath": "img/StrawberrySigma.png",
-    "destination": "sensationInfo.html?sensId=10",
+    "destination": "sensationInfo.php?sensId=10",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "strawberrySigma"
@@ -102,7 +102,7 @@
     "id": 11,
     "name": "Citric Substance",
     "imagePath": "img/CitricSubstance.png",
-    "destination": "sensationInfo.html?sensId=11",
+    "destination": "sensationInfo.php?sensId=11",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "citricSubstance"

@@ -7,6 +7,9 @@ nav {
 .submenu {
   list-style-type: none;
 }
+nav ul {
+  padding-left: 0;
+}
 .item {
   padding: 10px;
 }

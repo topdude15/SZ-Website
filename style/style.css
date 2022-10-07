@@ -118,6 +118,7 @@ a {
 	line-height: 60px;
 	font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 	font-size: 3vh;
+	font-weight: bold;
 }
 .orderSizeLabel {
 	float: right;

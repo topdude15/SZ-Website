@@ -10,7 +10,9 @@
 
 <body>
 	<div id = "navbar">
-		<!-- Will load navbar from navbar.html -->
+		<?php
+			require_once("navbar.php");
+		?>
 	</div>
 
 	<section id = "main" class = "homeContent">
@@ -30,10 +32,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../js/script.js"></script> 
 	<script src="../js/type.js"></script>
-	<script>
+<!-- 	<script>
 		$(function() {
 			$("#navbar").load("navbar.html");
 		});
-	</script>
+	</script> -->
 </body>
 </html>

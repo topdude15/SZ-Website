@@ -1,13 +1,13 @@
 <nav>
 	<ul class = "menu">
-		<li class = "logo"><a class = "imageLink" href = "index.html"><img src="../img/szlogo.png"></a></li>
-		<li class = "item"><a href="index.html">HOME</a></li>
+		<li class = "logo"><a class = "imageLink" href = "index.php"><img src="../img/szlogo.png"></a></li>
+		<li class = "item"><a href="index.php">HOME</a></li>
 		<li class = "item"><a href="#">CATERING</a></li>
 		<li class = "item"><a href="#">EDUCATION</a></li>
 		<li class = "item"><a href="#">FRANCHISING</a></li>
 		<li class = "item"><a href="#">ABOUT US</a></li>
 		<li class = "item"><a href="#">CONTACT US</a></li>
-		<li class = "item button order"><a href = "order.html">ORDER NOW</a></li>
+		<li class = "item button order"><a href = "order.php">ORDER NOW</a></li>
 		<li class = "item button secondary"><a href = "#popup1">FIND A LOCATION</a></li>
 		<li class = "toggle"><a href="#"><i class="fa-solid fa-bars fa-4x"></i></a></li>
 	</ul>

@@ -5,7 +5,7 @@ function createData(jsonFile) {
     var tmp = '';
 
     $.each(data, function(key ,value) {
-     tmp += '<a href = "/pages/' + value.destination + '" class = "menuItem">';
+     tmp += '<a href = "' + value.destination + '" class = "menuItem">';
      tmp += '	<div class = "orderItem" id = "' + value.divId + '">';
      tmp += '		<img src="../' + value.imagePath + '" width = "' + value.imageWidth + '">';
      tmp += '		<p>' + value.name + '</p>';
