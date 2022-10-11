@@ -14,7 +14,7 @@
     "imagePath": "img/BirthdayCakeCapacitor.png",
     "destination": "sensationInfo.php?sensId=1",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Birthday Cake Capacitor is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bdayCake"
   },
   {
@@ -23,7 +23,7 @@
     "imagePath": "img/BernoulliBrulee.png",
     "destination": "sensationInfo.php?sensId=2",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Bernoulli Brulee is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bernoulliBrulee"
   },
   {
@@ -33,7 +33,7 @@
     "destination": "sensationInfo.php?sensId=3",
     "imageWidth": "70%",
     "divId": "pbBonds",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in."
+    "description": "The Peanut Butter Bonds is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in."
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "imagePath": "img/BananaCreamPi.png",
     "destination": "sensationInfo.php?sensId=4",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Banana Cream Pi Bismuth is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "bananaCream"
   },
   {
@@ -50,7 +50,7 @@
     "imagePath": "img/MagneticMint.png",
     "destination": "sensationInfo.php?sensId=5",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Magnetic Mint is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "magneticMint"
   },
   {
@@ -59,7 +59,7 @@
     "imagePath": "img/MassMochaMadness.png",
     "destination": "sensationInfo.php?sensId=6",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Mass Mocha Madness is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "massMocha"
   },
   {
@@ -68,7 +68,7 @@
     "imagePath": "img/TropicalTurbine.png",
     "destination": "sensationInfo.php?sensId=7",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Tropical Turbine is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "tropicalTurbine"
   },
   {
@@ -77,7 +77,7 @@
     "imagePath": "img/CherryCharge.png",
     "destination": "sensationInfo.php?sensId=8",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Cherry Charge is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "cherryCharge"
   },
   {
@@ -86,7 +86,7 @@
     "imagePath": "img/KeyLimeVoltage.png",
     "destination": "sensationInfo.php?sensId=9",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Key Lime Voltage is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "keyLime"
   },
   {
@@ -95,7 +95,7 @@
     "imagePath": "img/StrawberrySigma.png",
     "destination": "sensationInfo.php?sensId=10",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Strawberry Sigma is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "strawberrySigma"
   },
   {
@@ -104,7 +104,7 @@
     "imagePath": "img/CitricSubstance.png",
     "destination": "sensationInfo.php?sensId=11",
     "imageWidth": "70%",
-    "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
+    "description": "The Citric Substance is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
     "divId": "citricSubstance"
   }
 ]

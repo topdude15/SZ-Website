@@ -6,6 +6,7 @@ function updateShoppingCart() {
 
 function loadShoppingCart() {
   let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
+  console.log(currentOrder);
   var tmp = '';
   var sens = '';
   $.getJSON("../data/sensations.json", function(data) {

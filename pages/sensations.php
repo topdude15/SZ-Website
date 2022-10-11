@@ -3,7 +3,7 @@
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/navbar.css">
 	<title>Sub Zero Ice Cream</title>
-	<style>@import url('http://fonts.cdnfonts.com/css/gotham-rounded');</style>
+	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>            
 </head>
 

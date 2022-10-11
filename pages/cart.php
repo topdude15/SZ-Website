@@ -4,14 +4,15 @@
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/cart.css">
 	<title>Sub Zero Ice Cream</title>
-	<style>@import url('http://fonts.cdnfonts.com/css/gotham-rounded');</style>
+	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>            
 </head>
 
-<!-- <body onload="createData('data/sensations.json')"> -->
 <body onload = "loadShoppingCart()">
 	<div id = "navbar">
-		<!-- Navbar will be loaded from navbar.html -->
+		<?php
+		require_once('navbar.php')
+		?>
 	</div>
 	<div class = "content">
 		<div class = "container" id = "main">
@@ -20,11 +21,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../js/script.js"></script>
 	<script src="../js/shoppingCart.js"></script>
-	<script>
-		$(function() {
-			$("#navbar").load("navbar.html");
-		})
-	</script>  
 </body>
 
 </html>
