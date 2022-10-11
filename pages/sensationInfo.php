@@ -6,10 +6,11 @@
 
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>
 
-<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/form.css">
 	<link rel="stylesheet" href="../style/navbar.css">
 	
 </head>
@@ -21,12 +22,14 @@
 		?>
 	</div>
 
-	<div class = "container" id = "main">
-		<div class = "orderBar" id = "orderBar">
+	<div class = "content">
+		<div class = "container" id = "main">
+			<div class = "orderBar" id = "orderBar">
+			</div>
 		</div>
 	</div>
 
-	<!-- <div class = "sensationContent">
+	<div class = "sensationContent">
 		<div class = "container" id = "sensationInfo">
 			<div class = "topLeftSensation" id = "topLeftSensation">
 			</div>
@@ -56,7 +59,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/sensationPage.js"></script>
