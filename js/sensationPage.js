@@ -8,6 +8,7 @@ function addToOrder() {
 
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
+  let waffleSelection = document.getElementById("waffle-yes").checked;
 
   let params = (new URL(document.location)).searchParams;
   let sensId = params.get("sensId");
@@ -24,11 +25,11 @@ function addToOrder() {
 
         if (currentData == null) {
           const newOrderId = revisedRandId();
-          const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase}]};
+          const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
           sessionStorage.setItem("szOrder", JSON.stringify(order));
         } else {
           var order = JSON.parse(currentData);
-          order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase});
+          order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection});
           sessionStorage.setItem("szOrder", JSON.stringify(order));
         }
       }

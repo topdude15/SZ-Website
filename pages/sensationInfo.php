@@ -54,7 +54,7 @@
 					</div>
 					<br>
 					<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
-					<button id="deleteOrderButton">Delete Order</button>
+					<!-- <button id="deleteOrderButton">Delete Order</button> -->
 					<br>
 				</div>
 			</div>

@@ -19,6 +19,7 @@ function loadShoppingCart() {
             tmp += '<p class = "cartTitle">' + sensation.name + '</p>';
             tmp += '<p class = "cartSubtitle">Size: ' + currentOrder.orderItems[i].itemSize + '</p>';
             tmp += '<p class = "cartSubtitle">Base: ' + currentOrder.orderItems[i].itemBase + '</p>';
+            tmp += '<p class = "cartSubtitle">Waffle included: ' + (currentOrder.orderItems[i].includeWaffle ? "Yes" : "No") + '</p>';
             tmp += '</div>';
           }
         }

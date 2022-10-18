@@ -56,7 +56,6 @@ a {
   object-fit: contain;
 }
 #sensationInfo {
-	width: 79%;
 	margin: auto;
 	margin-top: 20px;
 	display: flex;
@@ -94,7 +93,7 @@ a {
 	font-family:  'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 }
 .sensationContent {
-	width: 100%;
+	width: 80%;
 	margin: auto;
 }
 .sensationSelect {
