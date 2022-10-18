@@ -27,3 +27,15 @@ function loadShoppingCart() {
       $('#main').append(tmp);
   })
 }
+
+function calculatePricing() {
+  let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
+  console.log(currentOrder);
+
+  $.getJSON("../data/pricing.json", function(data) {
+    for(i = 0; i < currentOrder.orderItems.length; i++) {
+      var price = 0;
+      ``
+    }
+  })
+}

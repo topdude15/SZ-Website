@@ -8,7 +8,7 @@
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>            
 </head>
 
-<body onload = "loadShoppingCart()">
+<body onload = "loadShoppingCart(); calculatePricing();">
 	<div id = "navbar">
 		<?php
 		require_once('navbar.php')

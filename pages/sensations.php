@@ -23,7 +23,6 @@
 	<script src="../js/script.js"></script> 
 	<script>
 		$(function() {
-			$("#navbar").load("navbar.html");
 			$("#orderBar").load("cartBar.html");
 		})
 	</script>  
