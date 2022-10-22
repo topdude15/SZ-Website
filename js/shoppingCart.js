@@ -1,3 +1,6 @@
+var orderButton = document.getElementById("checkOutButton");
+orderButton.addEventListener("click", calculatePricing);
+
 function updateShoppingCart() {
   let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
   console.log("Current number of items in order:");
@@ -33,10 +36,16 @@ function calculatePricing() {
   let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
   console.log(currentOrder);
 
-  $.getJSON("../data/pricing.json", function(data) {
-    for(i = 0; i < currentOrder.orderItems.length; i++) {
-      var price = 0;
-      ``
-    }
-  })
+  
+
+  for (i = 0; i < currentOrder.orderItems.length; i++) {
+    console.log(currentOrder.orderItems[i].includeWaffle)
+  }
+  // $.getJSON("../data/pricing.json", function(data) {
+  //   var obj = data.find(function(sensation, index) {
+  //     for (i = 0; i < currentOrder.orderItems.length; i++) {
+  //       console.log(currentOrder.orderItems[i].includeWaffle);
+  //     }
+  //   })
+  // })
 }

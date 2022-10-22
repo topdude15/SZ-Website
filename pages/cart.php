@@ -16,7 +16,7 @@
 	</div>
 	<div class = "content">
 		<div class = "container" id = "main">
-			<button>Check Out</button>
+			<button id = "checkOutButton">Check Out</button>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

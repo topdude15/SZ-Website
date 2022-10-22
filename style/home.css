@@ -1,11 +1,12 @@
 .homeContent {
 	display: flex;
-	position: relative;
+	flex-direction: column;
+	position: static;
 	width: 100%;
 	background-color: #ab2328;
-	min-height: 780px;
 }
 .homeContent img {
+	margin: 5%;
 	max-width: 70%;
 	object-fit: contain;
 }
@@ -16,6 +17,7 @@
 }
 .mainLeft h1 {
 	margin: auto;
+	font-family: 'Coda Caption', sans-serif;
 	font-size: 5vh;
 	color: white;
 }
@@ -24,10 +26,9 @@
 	justify-content: center;
 	width: 60%;
 }
-
 /* Code for wave at bottom of main section */
 .custom-shape-divider-bottom-1656567268 {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	width: 100%;
