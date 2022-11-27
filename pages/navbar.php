@@ -18,9 +18,12 @@
 		<a class="close" href="#">&times;</a>
 		<div class="popupContent">
 			<div style="width: 100%;height:100%">
-				<div id="storelocatorwidget" style="width:100%;"><p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p></div>
+
+				<!-- Commented out to load faster.  Must be restored for final page. -->
+				
+				<!-- <div id="storelocatorwidget" style="width:100%;"><p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p></div>
 				<script type="text/javascript" src="https://cdn.storelocatorwidgets.com/widget/mapbox-gl.js"></script>
-				<script type="text/javascript" id="storelocatorscript" data-uid="VOQvY4l4F49S4ZcKUlCl00YEWOWrbC76" data-platform="MapTiler" src="https://cdn.storelocatorwidgets.com/widget/widget.js"></script>
+				<script type="text/javascript" id="storelocatorscript" data-uid="VOQvY4l4F49S4ZcKUlCl00YEWOWrbC76" data-platform="MapTiler" src="https://cdn.storelocatorwidgets.com/widget/widget.js"></script> -->
 			</div>
 		</div>
 	</div>

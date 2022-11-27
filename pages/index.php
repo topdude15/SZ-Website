@@ -3,6 +3,7 @@
 	<link rel="stylesheet" href="../style/home.css">
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/navbar.css">
+	<link rel="stylesheet" href="../style/footer.css">
 	<title>Sub Zero Ice Cream</title>
 	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>         
@@ -28,6 +29,33 @@
 			</svg>
 		</div>
 	</section>
+
+	<section id="action-boxes">
+		<div class = "box">
+			<i class="fa-solid fa-ice-cream fa-3x"></i>
+			<h2>Catering</h2>
+			<p>Feature Our Difference at Your Event!</p>
+			<button>REQUEST CATERING INFORMATION</button>
+		</div>
+		<div class = "box">
+			<i class="fa-solid fa-location-arrow fa-3x"></i>
+			<h2>Find a Location</h2>
+			<p>Visit our difference.  Come see us at a location near you.</p>
+			<button>FIND A LOCATION</button>
+		</div>
+		<div class = "box">
+			<i class="fa-solid fa-store fa-3x"></i>
+			<h2>Order Online</h2>
+			<p>Taste Our Difference by ordering online and have it ready for you to pickup when you arrive.</p>
+			<button>ORDER ONLINE</button>
+		</div>
+	</section>
+
+	<div id = "footer">
+		<?php
+		require_once("footer.php");
+		?>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../js/script.js"></script> 

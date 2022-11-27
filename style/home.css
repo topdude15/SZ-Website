@@ -26,6 +26,30 @@
 	justify-content: center;
 	width: 60%;
 }
+
+#action-boxes {
+	display: flex;
+	flex-direction: row;
+}
+#action-boxes button {
+	color: white;
+	background-color: #ab2328;
+	font-family: 'Gotham Rounded', sans-serif;
+	border-radius: 8px;
+	border: 0px;
+	padding: 10px 15px;
+	margin: 5px 0;
+}
+#action-boxes i {
+	margin: 25px;
+}
+
+@media all and (max-width: 700px) {
+	#action-boxes {
+		flex-direction: column;
+	}
+}
+
 /* Code for wave at bottom of main section */
 .custom-shape-divider-bottom-1656567268 {
 	position: relative;
