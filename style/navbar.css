@@ -148,11 +148,9 @@ nav ul {
   }
 }
 @media all and (max-width: 800px) {
-  .menu {
-    padding-top: 4%;
-  }
   .logo img {
-    width: 140%;
+    width: 90%;
+    display: inline-block;
   }
 }
 /* Desktop menu */
