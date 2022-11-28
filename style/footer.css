@@ -2,6 +2,17 @@
 	background-color: #171c8f;
 }
 
+#footer-sections {
+	padding-top: 2%;
+	display: flex;
+	flex-direction: row;
+}
+.footer-section {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
 #footer p {
 	color: white;
 }

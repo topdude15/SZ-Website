@@ -22,7 +22,7 @@
 .mainLeft h1 {
 	margin: auto;
 	font-family: 'Coda Caption', sans-serif;
-	font-size: 3.5rem;
+	font-size: calc(2rem + (20 * (100vw - 400px)/ 624));
 	padding: 3%;
 	color: white;
 }
@@ -54,36 +54,26 @@
 	margin: 0 auto;
 	padding: 35px;
 	text-align: center;
-
 }
-
+.action-box p {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
 @media all and (max-width: 700px) {
 	#action-boxes {
 		flex-direction: column;
 	}
+	#banner {
+		flex-direction: column;
+	}
+	.mainLeft, .mainRight {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 /* Code for wave at bottom of main section */
-.custom-shape-divider-bottom-1656567268 {
-	position: relative;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-	transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1656567268 svg {
-	position: relative;
-	display: block;
-	width: calc(111% + 1.3px);
-	height: 56px;
-}
-
-.custom-shape-divider-bottom-1656567268 .shape-fill {
-	fill: #FFFFFF;
-}
 
 .custom-shape-divider-top-1669611750 {
     position: relative;
