@@ -6,7 +6,10 @@
 	<link rel="stylesheet" href="../style/footer.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Sub Zero Ice Cream</title>
-	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
+	<style>
+		@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+	</style>
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>         
 </head>
 
