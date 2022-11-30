@@ -21,7 +21,7 @@
 }
 .mainLeft h1 {
 	margin: auto;
-	font-family: 'Coda Caption', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: calc(2rem + (20 * (100vw - 400px)/ 624));
 	padding: 3%;
 	color: white;
@@ -35,6 +35,7 @@
 #action-boxes {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 2%;
 }
 #action-boxes button {
 	color: white;
@@ -52,17 +53,23 @@
 .action-box {
 	width: 80%;
 	margin: 0 auto;
-	padding: 35px;
 	text-align: center;
+}
+.action-box h2 {
+	font-family: "Montserrat", sans-serif;
 }
 .action-box p {
 	width: 70%;
 	text-align: center;
 	margin: 0 auto;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
 }
 @media all and (max-width: 700px) {
 	#action-boxes {
 		flex-direction: column;
+		padding-bottom: 15%;
 	}
 	#banner {
 		flex-direction: column;
@@ -76,21 +83,28 @@
 /* Code for wave at bottom of main section */
 
 .custom-shape-divider-top-1669611750 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
 }
 
 .custom-shape-divider-top-1669611750 svg {
-    position: relative;
-    display: block;
-    width: calc(130% + 1.3px);
-    height: 92px;
+	position: relative;
+	display: block;
+	width: calc(130% + 1.3px);
+	height: 92px;
 }
 
 .custom-shape-divider-top-1669611750 .shape-fill {
-    fill: #AB2328;
+	fill: #AB2328;
+}
+
+
+@media all and (max-width: 700px) {
+	.action-box p {
+		width: 100%;
+	}
 }

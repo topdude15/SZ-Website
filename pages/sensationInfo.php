@@ -1,24 +1,22 @@
 <html>
 <head>
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/form.css">
+	<link rel="stylesheet" href="../style/navbar.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Sub Zero Ice Cream</title>
 
 	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
 
 	<script src="https://kit.fontawesome.com/ef00204d1d.js" crossorigin="anonymous"></script>
-
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" href="../style/style.css">
-	<link rel="stylesheet" href="../style/form.css">
-	<link rel="stylesheet" href="../style/navbar.css">
 	
 </head>
 
 <body onload="getSensationInfo()">
 	<div id = "navbar">
 		<?php
-			require_once("navbar.php");
+		require_once("navbar.php");
 		?>
 	</div>
 
@@ -60,20 +58,20 @@
 			</div>
 		</div>
 	</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../js/script.js"></script>
-<script src="../js/sensationPage.js"></script>
-<script src="../js/shoppingCart.js"></script>
-<script>
-	function getSensationInfo() {
-		let params = (new URL(document.location)).searchParams;
-		let sensId = params.get("sensId");
-		loadSensation(sensId, '../data/sensations.json', '../data/options.json');
-	}
-	$(function() {
-		$("#orderBar").load("cartBar.html");
-	})
-</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/sensationPage.js"></script>
+	<script src="../js/shoppingCart.js"></script>
+	<script>
+		function getSensationInfo() {
+			let params = (new URL(document.location)).searchParams;
+			let sensId = params.get("sensId");
+			loadSensation(sensId, '../data/sensations.json', '../data/options.json');
+		}
+		$(function() {
+			$("#orderBar").load("cartBar.html");
+		})
+	</script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/footer.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Sub Zero Ice Cream - Home</title>
+	<title>Sub Zero Ice Cream - Catering</title>
 	<style>
 		@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
 		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
@@ -23,10 +23,10 @@
 	<section id = "main" class = "homeContent">
 		<div id = "banner">
 			<div class = "mainLeft">
-				<h1>Experience Our Difference</h1>
+				<h1>Cater Differently</h1>
 			</div>
 			<div class = "mainRight">
-				<img src="../img/newfrontpage.jpg">
+				<img src="../img/catering.jpg">
 			</div>
 		</div>	
 
