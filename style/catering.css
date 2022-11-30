@@ -1,0 +1,30 @@
+.action-box img {
+	width: 100px;
+	height: 100px;
+}
+
+#video {
+	padding: 3%;
+	display: flex;
+	flex-direction: row;
+}
+#videoLeft {
+	position: relative;
+	width: 40%;
+	padding-bottom: 25%;
+	height: 0;
+}
+#videoLeft iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media all and (max-width: 700px) {
+	#video {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}

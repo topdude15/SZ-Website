@@ -16,15 +16,35 @@
 }
 .mainLeft {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	width: 40%;
+	margin: auto;
 }
 .mainLeft h1 {
-	margin: auto;
 	font-family: 'Montserrat', sans-serif;
 	font-size: calc(2rem + (20 * (100vw - 400px)/ 624));
 	padding: 3%;
 	color: white;
+}
+.mainLeft p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(1rem + (20 * (100vw - 400px)/ 1400));
+	padding: 3%;
+	color: white;
+}
+.primary-action {
+	color: #FFFFFF;
+	background: #171c8f;
+	border-color: #171c8f;
+	padding: 10px 15px;
+	margin: 5px 0;
+	border-radius: 8px;
+	font-family: 'Gotham Rounded', sans-serif;
+	text-decoration: none;
+	font-size: 24px;
+	margin: 3%;
+	padding: 2%;
 }
 .mainRight {
 	display: flex;

@@ -24,6 +24,7 @@
 		<div id = "banner">
 			<div class = "mainLeft">
 				<h1>Experience Our Difference</h1>
+				<p>Sub Zero offers a unique and jawdropping catering experience for your event!</p>
 			</div>
 			<div class = "mainRight">
 				<img src="../img/newfrontpage.jpg">

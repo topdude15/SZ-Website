@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/footer.css">
+	<link rel="stylesheet" href="../style/catering.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Sub Zero Ice Cream - Catering</title>
 	<style>
@@ -24,6 +25,8 @@
 		<div id = "banner">
 			<div class = "mainLeft">
 				<h1>Cater Differently</h1>
+				<p>Sub Zero offers a unique and jawdropping catering experience for your event!</p>
+				<button class = "primary-action">Schedule Your Event Today</button>
 			</div>
 			<div class = "mainRight">
 				<img src="../img/catering.jpg">
@@ -38,24 +41,42 @@
 			</svg>
 		</div>
 
+	<section id = "video">
+		<div id = "videoLeft">
+			<iframe src="https://www.youtube.com/embed/JxoSMwgkE2E?modestbranding=1&rel=0" title="30 Second 1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<div id = "videoRight">
+			<h2>Customize to Impress</h2>
+		</div>
+		
+	</section>
+
 	<section id="action-boxes">
 		<div class = "action-box">
-			<i class="fa-solid fa-ice-cream fa-3x"></i>
-			<h2>Catering</h2>
-			<p>Feature Our Difference at Your Event!</p>
-			<button>REQUEST CATERING INFORMATION</button>
+			<img src = "../img/experience.png"></i>
+			<h2>Experience</h2>
+			<p>Not just a dessert, but an experience.</p>
 		</div>
 		<div class = "action-box">
-			<i class="fa-solid fa-location-arrow fa-3x"></i>
-			<h2>Find a Location</h2>
-			<p>Visit our difference.  Come see us at a location near you.</p>
-			<button>FIND A LOCATION</button>
+			<img src = "../img/customized.png"></i>
+			<h2>Customized</h2>
+			<p>Pick the flavors you want to share. Nothing comapres to freshly frozen ice cream, made specifically for you.</p>
 		</div>
 		<div class = "action-box">
-			<i class="fa-solid fa-store fa-3x"></i>
-			<h2>Order Online</h2>
-			<p>Taste Our Difference by ordering online and have it ready for you to pickup when you arrive.</p>
-			<button>ORDER ONLINE</button>
+			<img src = "../img/hasslefree.png"></i>
+			<h2>Hassle-Free</h2>
+			<p>Present 4-5 highly exciting liquid nitrogen experiements = Fun Learning Experience</p>
+		</div>
+		<div class = "action-box">
+			<img src = "../img/memorable.png"></i>
+			<h2>Memorable</h2>
+			<p>Celebrate the good times in a unique and tasty way that your guests will always remember and talk about.</p>
+		</div>
+		<div class = "action-box">
+			<img src = "../img/worryfree.png"></i>
+			<h2>Worry-Free</h2>
+			<p>Enjoy your party while we take care of your guests from setup to cleanup.</p>
 		</div>
 	</section>
 
