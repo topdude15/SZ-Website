@@ -1,0 +1,7 @@
+.faq-question {
+    font-size: calc(1.4rem + (20 * (100vw - 400px)/ 6000)) !important;
+}
+.faq-body p {
+    font-size: calc(0.9rem + (20 * (100vw - 400px)/ 6000)) !important;
+    padding-bottom: 3%;
+}

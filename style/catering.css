@@ -11,7 +11,7 @@
 #videoLeft {
 	position: relative;
 	width: 40%;
-	padding-bottom: 25%;
+	padding-bottom: 22.5%;
 	height: 0;
 }
 #videoLeft iframe {
@@ -26,9 +26,13 @@
 }
 #videoRight h2 {
 	text-align: center;
-	font-size: calc(2rem + (20 * (100vw - 400px)/ 624));
+	font-size: calc(2rem + (20 * (100vw - 400px)/ 1800));
 	font-family: 'Montserrat', sans-serif;
-	padding-left:  3%;
+}
+#videoRight p {
+	text-align: center;
+	font-size: calc(2rem + (20 * (100vw - 400px)/ 3600));
+	font-family: 'Montserrat', sans-serif;
 }
 
 @media all and (max-width: 700px) {

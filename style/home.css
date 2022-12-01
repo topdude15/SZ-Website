@@ -23,13 +23,13 @@
 }
 .mainLeft h1 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: calc(2rem + (20 * (100vw - 400px)/ 624));
+	font-size: calc(2rem + (20 * (100vw - 400px)/ 750));
 	padding: 3%;
 	color: white;
 }
 .mainLeft p {
 	font-family: 'Montserrat', sans-serif;
-	font-size: calc(1rem + (20 * (100vw - 400px)/ 1400));
+	font-size: calc(1rem + (20 * (100vw - 400px)/ 1600));
 	padding: 3%;
 	color: white;
 }

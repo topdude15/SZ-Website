@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="../style/footer.css">
 	<link rel="stylesheet" href="../style/catering.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 	<title>Sub Zero Ice Cream - Catering</title>
 	<style>
 		@import url('https://fonts.cdnfonts.com/css/gotham-rounded');
@@ -26,7 +27,7 @@
 			<div class = "mainLeft">
 				<h1>Cater Differently</h1>
 				<p>Sub Zero offers a unique and jawdropping catering experience for your event!</p>
-				<button class = "primary-action">Schedule Your Event Today</button>
+				<button class = "primary-action" onclick = "window.location.href='index.php'">Schedule Your Event Today</button>
 			</div>
 			<div class = "mainRight">
 				<img src="../img/catering.jpg">
@@ -43,11 +44,12 @@
 
 	<section id = "video">
 		<div id = "videoLeft">
-			<iframe src="https://www.youtube.com/embed/JxoSMwgkE2E?modestbranding=1&rel=0" title="30 Second 1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/JxoSMwgkE2E?modestbranding=1&?rel=0&?mute=1" title="30 Second 1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 
 		<div id = "videoRight">
 			<h2>Customize to Impress</h2>
+			<p>Do something here</p>
 		</div>
 		
 	</section>
@@ -78,6 +80,10 @@
 			<h2>Worry-Free</h2>
 			<p>Enjoy your party while we take care of your guests from setup to cleanup.</p>
 		</div>
+	</section>
+
+	<section id = "eventTypes">
+		<h2>Make Your Next Event the Highlight of the Year!</h2>
 	</section>
 
 	<div id = "footer">

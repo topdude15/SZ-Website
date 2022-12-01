@@ -1,0 +1,62 @@
+ .faq-heading{
+      border-bottom: #777;
+      padding: 20px 60px;
+    }
+    .faq-container{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hr-line{
+      width: 60%;
+      margin: auto;
+
+    }
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-question {
+  /* background-color: #eee; */
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 85%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+.faq-body{
+  margin: auto;
+  /* text-align: center; */
+  width: 85%; 
+  padding: auto;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/*.active,
+.faq-question:hover {
+  background-color: #F9F9F9;
+}*/
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+.faq-question:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+
+@media all and (max-width: 700px) {
+    .faq-question {
+      width: 100%;
+    }
+    .faq-body {
+      width: 90%;
+    }
+}

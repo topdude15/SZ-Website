@@ -3,7 +3,9 @@
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/form.css">
 	<link rel="stylesheet" href="../style/navbar.css">
+	<link rel="stylesheet" href="../style/order.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 	<title>Sub Zero Ice Cream</title>
 
 	<style>@import url('https://fonts.cdnfonts.com/css/gotham-rounded');</style>
