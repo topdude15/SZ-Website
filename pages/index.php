@@ -51,13 +51,13 @@
 			<i class="fa-solid fa-location-arrow fa-3x"></i>
 			<h2>Find a Location</h2>
 			<p>Visit our difference.  Come see us at a location near you.</p>
-			<button>FIND A LOCATION</button>
+			<button onclick="window.location.href='#popup1'">FIND A LOCATION</button>
 		</div>
 		<div class = "action-box">
 			<i class="fa-solid fa-store fa-3x"></i>
 			<h2>Order Online</h2>
 			<p>Taste Our Difference by ordering online and have it ready for you to pickup when you arrive.</p>
-			<button>ORDER ONLINE</button>
+			<button onclick = "window.location.href='order.php'">ORDER ONLINE</button>
 		</div>
 	</section>
 

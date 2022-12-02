@@ -141,29 +141,29 @@
 
               <section id="action-boxes">
                 <div class = "action-box">
-                  <img src = "../img/experience.png"></i>
-                  <h2>Experience</h2>
-                  <p>Not just a dessert, but an experience.</p>
+                  <img src = "../img/onsite.png"></i>
+                  <h2>Onsite</h2>
+                  <p>Super cool science presentation delivered to you = NO Travel Headaches</p>
                 </div>
                 <div class = "action-box">
-                  <img src = "../img/customized.png"></i>
-                  <h2>Customized</h2>
-                  <p>Pick the flavors you want to share. Nothing comapres to freshly frozen ice cream, made specifically for you.</p>
+                  <img src = "../img/educate.png"></i>
+                  <h2>Educate</h2>
+                  <p>Multiple science concepts taught using liquid nitrogen = Applied STEM Education</p>
                 </div>
                 <div class = "action-box">
-                  <img src = "../img/hasslefree.png"></i>
-                  <h2>Hassle-Free</h2>
-                  <p>Present 4-5 highly exciting liquid nitrogen experiements = Fun Learning Experience</p>
+                  <img src = "../img/entertain.png"></i>
+                  <h2>Entertain</h2>
+                  <p>Present 4-5 highly exciting liquid nitrogen experiments = Fun Learning Experience</p>
                 </div>
                 <div class = "action-box">
-                  <img src = "../img/memorable.png"></i>
-                  <h2>Memorable</h2>
-                  <p>Celebrate the good times in a unique and tasty way that your guests will always remember and talk about.</p>
+                  <img src = "../img/retain.jpg"></i>
+                  <h2>Retain</h2>
+                  <p>Interactive demonstration drives home STEM concepts for reference all year long = Smart Students</p>
                 </div>
                 <div class = "action-box">
                   <img src = "../img/worryfree.png"></i>
-                  <h2>Worry-Free</h2>
-                  <p>Enjoy your party while we take care of your guests from setup to cleanup.</p>
+                  <h2>Enjoy</h2>
+                  <p>Final favorite experiment is making and sharing nitrogen ice cream! Science is cool...and yummy!</p>
                 </div>
               </section>
 

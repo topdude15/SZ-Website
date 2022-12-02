@@ -1,14 +1,14 @@
 [
   {
     "name": "Sensations",
-    "imagePath": "img/ChocolateConduction.png",
+    "imagePath": "img/sensation/ChocolateConduction.png",
     "destination": "sensations.php",
     "imageWidth": "70%",
     "divId": "sensations"
   },
   {
     "name": "Create Your Own",
-    "imagePath": "img/PeanutButterBonds.png",
+    "imagePath": "img/sensation/PeanutButterBonds.png",
     "destination": "create.php",
     "imageWidth": "70%",
     "divId": "create"
@@ -29,14 +29,14 @@
   },
   {
     "name": "Specialty Items",
-    "imagePath": "img/MagneticMint.png",
+    "imagePath": "img/sensation/MagneticMint.png",
     "destination": "special.php",
     "imageWidth": "70%",
     "divId": "special"
   },
   {
     "name": "Specialty Items",
-    "imagePath": "img/MagneticMint.png",
+    "imagePath": "img/sensation/MagneticMint.png",
     "destination": "special.php",
     "imageWidth": "70%",
     "divId": "special"

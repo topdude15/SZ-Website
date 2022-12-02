@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Chocolate Conduction",
-    "imagePath": "img/ChocolateConduction.png",
+    "imagePath": "img/sensation/ChocolateConduction.png",
     "destination": "sensationInfo.php?sensId=0",
     "imageWidth": "70%",
     "description": "The Chocolate Conduction is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -11,7 +11,7 @@
   {
     "id": 1,
     "name": "Birthday Cake Capacitor",
-    "imagePath": "img/BirthdayCakeCapacitor.png",
+    "imagePath": "img/sensation/BirthdayCakeCapacitor.png",
     "destination": "sensationInfo.php?sensId=1",
     "imageWidth": "70%",
     "description": "The Birthday Cake Capacitor is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "name": "Bernoulli Brulee",
-    "imagePath": "img/BernoulliBrulee.png",
+    "imagePath": "img/sensation/BernoulliBrulee.png",
     "destination": "sensationInfo.php?sensId=2",
     "imageWidth": "70%",
     "description": "The Bernoulli Brulee is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -29,7 +29,7 @@
   {
     "id": 3,
     "name": "Peanut Butter Bonds",
-    "imagePath": "img/PeanutButterBonds.png",
+    "imagePath": "img/sensation/PeanutButterBonds.png",
     "destination": "sensationInfo.php?sensId=3",
     "imageWidth": "70%",
     "divId": "pbBonds",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Banana Cream Pi Bismuth",
-    "imagePath": "img/BananaCreamPi.png",
+    "imagePath": "img/sensation/BananaCreamPi.png",
     "destination": "sensationInfo.php?sensId=4",
     "imageWidth": "70%",
     "description": "The Banana Cream Pi Bismuth is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -47,7 +47,7 @@
   {
     "id": 5,
     "name": "Magnetic Mint",
-    "imagePath": "img/MagneticMint.png",
+    "imagePath": "img/sensation/MagneticMint.png",
     "destination": "sensationInfo.php?sensId=5",
     "imageWidth": "70%",
     "description": "The Magnetic Mint is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -56,7 +56,7 @@
   {
     "id": 6,
     "name": "Mass Mocha Madness",
-    "imagePath": "img/MassMochaMadness.png",
+    "imagePath": "img/sensation/MassMochaMadness.png",
     "destination": "sensationInfo.php?sensId=6",
     "imageWidth": "70%",
     "description": "The Mass Mocha Madness is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -65,7 +65,7 @@
   {
     "id": 7,
     "name": "Tropical Turbine",
-    "imagePath": "img/TropicalTurbine.png",
+    "imagePath": "img/sensation/TropicalTurbine.png",
     "destination": "sensationInfo.php?sensId=7",
     "imageWidth": "70%",
     "description": "The Tropical Turbine is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -74,7 +74,7 @@
   {
     "id": 8,
     "name": "Cherry Charge",
-    "imagePath": "img/CherryCharge.png",
+    "imagePath": "img/sensation/CherryCharge.png",
     "destination": "sensationInfo.php?sensId=8",
     "imageWidth": "70%",
     "description": "The Cherry Charge is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -83,7 +83,7 @@
   {
     "id": 9,
     "name": "Key Lime Voltage",
-    "imagePath": "img/KeyLimeVoltage.png",
+    "imagePath": "img/sensation/KeyLimeVoltage.png",
     "destination": "sensationInfo.php?sensId=9",
     "imageWidth": "70%",
     "description": "The Key Lime Voltage is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "name": "Strawberry Sigma",
-    "imagePath": "img/StrawberrySigma.png",
+    "imagePath": "img/sensation/StrawberrySigma.png",
     "destination": "sensationInfo.php?sensId=10",
     "imageWidth": "70%",
     "description": "The Strawberry Sigma is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
@@ -101,7 +101,7 @@
   {
     "id": 11,
     "name": "Citric Substance",
-    "imagePath": "img/CitricSubstance.png",
+    "imagePath": "img/sensation/CitricSubstance.png",
     "destination": "sensationInfo.php?sensId=11",
     "imageWidth": "70%",
     "description": "The Citric Substance is a very good flavor.  It has chocolate as its flavor base, with chocolate flakes and brownie bites mixed in.",
