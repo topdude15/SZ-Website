@@ -37,6 +37,19 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+#events {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0 15%;
+}
+
+.event img {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+
 @media all and (max-width: 700px) {
 	#video {
 		display: flex;
@@ -51,5 +64,9 @@
 	}
 	#videoRight h2 {
 		padding-left: 0;
+	}
+	#events {
+		flex-direction: column;
+		align-items: center;
 	}
 }

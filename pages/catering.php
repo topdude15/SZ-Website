@@ -83,7 +83,25 @@
 	</section>
 
 	<section id = "eventTypes">
-		<h2>Make Your Next Event the Highlight of the Year!</h2>
+		<!-- <h2>Make Your Next Event the Highlight of the Year!</h2> -->
+		<section id = "events">
+			<div class = "event">
+				<img src="../img/business.jpg">
+				<h2>Business</h2>
+				<p>Business Events</p>
+			</div>
+			<div class = "event">
+				<img src="../img/celebration.jpg">
+				<h2>Business</h2>
+				<p>Business Events</p>
+			</div>
+			<div class = "event">
+				<img src="../img/wedding.jpg">
+				<h2>Business</h2>
+				<p>Business Events</p>
+			</div>
+
+		</section>
 	</section>
 
 	<div id = "footer">
