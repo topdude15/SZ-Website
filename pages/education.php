@@ -4,9 +4,9 @@
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/navbar.css">
   <link rel="stylesheet" href="../style/footer.css">
-  <link rel="stylesheet" href="../style/catering.css">
   <link rel="stylesheet" href="../style/education.css">
   <link rel="stylesheet" href="../style/faq.css">
+  <link rel="stylesheet" href="../style/video.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
   <title>Sub Zero Ice Cream - Education</title>
@@ -53,28 +53,28 @@
      <section class="faq-container">
       <div class="faq-one">
         <!-- faq question -->
-        <h2 class="faq-question">Are your Liquid Nitrogen School Presentations safe?</h1>
+        <h3 class="faq-question">Are your Liquid Nitrogen School Presentations safe?</h3>
           <!-- faq answer -->
           <div class="faq-body">
-            <p>Sub Zero presentations are very safe. All of our experiments are very engaging for both students and staff members. The purpose of the presentation is to demonstrate scientific principles while using liquid nitrogen.</p>
+            <p class = "faqText">Sub Zero presentations are very safe. All of our experiments are very engaging for both students and staff members. The purpose of the presentation is to demonstrate scientific principles while using liquid nitrogen.</p>
           </div>
         </div>
         <hr class="hr-line">
         <div class="faq-two">
           <!-- faq question -->
-          <h2 class="faq-question">How much does the presentation cost?</h1>
+          <h3 class="faq-question">How much does the presentation cost?</h3>
             <!-- faq answer -->
             <div class="faq-body">
-              <p>The school presentation cost will vary by your local Sub Zero location. The price of the presentation is based on the number of students and staff, distance, and any additional add-on items requested. Please call your nearest location directly for pricing information.</p>
+              <p class = "faqText">The school presentation cost will vary by your local Sub Zero location. The price of the presentation is based on the number of students and staff, distance, and any additional add-on items requested. Please call your nearest location directly for pricing information.</p>
             </div>
           </div>
           <hr class="hr-line">
           <div class="faq-three">
             <!-- faq question -->
-            <h2 class="faq-question">What educational material does the presentation cover?</h1>
+            <h3 class="faq-question">What educational material does the presentation cover?</h3>
               <!-- faq answer -->
               <div class="faq-body">
-                <p>Sub Zero will adapt the presentation material to the grade level of the students, but we cover the following educational scientific topics:</p>
+                <p class = "faqText">Sub Zero will adapt the presentation material to the grade level of the students, but we cover the following educational scientific topics:</p>
                 <ul>
                   <li>Nitrogen Safety</li>
                   <li>Atmosphere</li>
@@ -88,34 +88,34 @@
             <hr class="hr-line">
             <div class="faq-four">
               <!-- faq question -->
-              <h2 class="faq-question">How long is the presentation?</h1>
+              <h3 class="faq-question">How long is the presentation?</h3>
                 <!-- faq answer -->
                 <div class="faq-body">
-                  <p>The science presentation and ice cream should take 45-55 minutes. Presentation length can be adjusted according to class schedules and teacher needs.</p>
+                  <p class = "faqText">The science presentation and ice cream should take 45-55 minutes. Presentation length can be adjusted according to class schedules and teacher needs.</p>
                 </div>
               </div>
               <hr class="hr-line">
               <div class="faq-five">
                 <!-- faq question -->
-                <h2 class="faq-question">How much space is needed? Do you need electricity? Do you need water?</h1>
+                <h3 class="faq-question">How much space is needed? Do you need electricity? Do you need water?</h3>
                   <!-- faq answer -->
                   <div class="faq-body">
-                    <p>We need enough space for an 8' table and room to walk around it. We can perform the presentation inside or outside based on the number of students. We do not need electricity. Access to water is helpful, but we can bring our own containers if necessary.</p>
+                    <p class = "faqText">We need enough space for an 8' table and room to walk around it. We can perform the presentation inside or outside based on the number of students. We do not need electricity. Access to water is helpful, but we can bring our own containers if necessary.</p>
                   </div>
                 </div>
                 <hr class="hr-line">
                 <div class="faq-six">
                   <!-- faq question -->
-                  <h2 class="faq-question">What food will be served? What if we have children with allergies?</h1>
+                  <h3 class="faq-question">What food will be served? What if we have children with allergies?</h3>
                     <!-- faq answer -->
                     <div class="faq-body">
-                      <p>Sub Zero will make ice cream for all students and staff at the conclusion of the presentation. We will be making the ice cream onsite and we can cater to most allergies that your staff or students may have. Please disclose the allergies before the presentation with the Sub Zero owner so we can come prepared.</p>
+                      <p class = "faqText">Sub Zero will make ice cream for all students and staff at the conclusion of the presentation. We will be making the ice cream onsite and we can cater to most allergies that your staff or students may have. Please disclose the allergies before the presentation with the Sub Zero owner so we can come prepared.</p>
                     </div>
                   </div>
                   <hr class="hr-line">
                   <div class="faq-seven">
                     <!-- faq question -->
-                    <h2 class="faq-question">What topics can we cover?</h1>
+                    <h3 class="faq-question">What topics can we cover?</h3>
                       <!-- faq answer -->
                       <div class="faq-body">
                         <ul>

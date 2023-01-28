@@ -1,7 +1,15 @@
 .faq-question {
-    font-size: calc(1.4rem + (20 * (100vw - 400px)/ 6000)) !important;
+    font-size: calc(1.4rem + (20 * (100vw - 400px)/ 6000));
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
-.faq-body p {
-    font-size: calc(0.9rem + (20 * (100vw - 400px)/ 6000)) !important;
+.faqText {
+    font-size: calc(0.9rem + (20 * (100vw - 400px)/ 3500));
     padding-bottom: 3%;
+    font-family: 'Montserrat', sans-serif;
 }
+/*li {
+    font-size: calc(0.9rem + (20 * (100vw - 400px)/ 3500));
+    padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}*/

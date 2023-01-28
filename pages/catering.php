@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/footer.css">
 	<link rel="stylesheet" href="../style/catering.css">
+	<link rel="stylesheet" href="../style/video.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 	<title>Sub Zero Ice Cream - Catering</title>
@@ -49,7 +50,7 @@
 
 		<div id = "videoRight">
 			<h2>Customize to Impress</h2>
-			<p>Do something here</p>
+			<p class = "videoText">Do something here</p>
 		</div>
 		
 	</section>
