@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="../style/form.css">
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/order.css">
+	<link rel="stylesheet" href="../style/footer.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 	<title>Sub Zero Ice Cream</title>
@@ -26,42 +27,48 @@
 		<div class = "container" id = "main">
 			<div class = "orderBar" id = "orderBar">
 			</div>
+			<div class = "sensationContent">
+			<div class = "container" id = "sensationInfo">
+				<div class = "topLeftSensation" id = "topLeftSensation">
+				</div>
+				<div class = "topRightSensation" id = "topRightSensation">
+					<div id = "topRightSensationInfo">
+					</div>
+					<div id = "topRightSensationOptions">
+						<h2>Choose Your Size</h2>
+						<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationSize" name = "topRightSensationSize">
+							<option selected disabled hidden>Select Your Size...</option>
+						</select>
+						<h2>Choose Your Base</h2>
+						<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationBase" name = "topRightSensationBase">
+							<option selected disabled hidden>Select Your Base...</option>
+						</select>
+						<h2>Would you like a waffle bowl?</h2>
+						<div id = "waffleSelect">
+							<input id = "waffle-yes" name = "waffle" type="radio" checked>
+							<label for = "waffle-yes">Yes</label>
+							<input id = "waffle-no" name = "waffle" type= "radio">
+							<label for = "waffle-no">No</label>
+						</div>
+						<br>
+						<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
+						<br>
+					</div>
+				</div>
+			</div>
 		</div>
+		</div>
+		
 	</div>
 
-	<div class = "sensationContent">
-		<div class = "container" id = "sensationInfo">
-			<div class = "topLeftSensation" id = "topLeftSensation">
-			</div>
-			<div class = "topRightSensation" id = "topRightSensation">
-				<div id = "topRightSensationInfo">
-				</div>
-				<div id = "topRightSensationOptions">
-					<h2>Choose Your Size</h2>
-					<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationSize" name = "topRightSensationSize">
-						<option selected disabled hidden>Select Your Size...</option>
-					</select>
-					<h2>Choose Your Base</h2>
-					<select class = "form-select form-select-lg mb-3 selects" id = "topRightSensationBase" name = "topRightSensationBase">
-						<option selected disabled hidden>Select Your Base...</option>
-					</select>
-					<h2>Would you like a waffle bowl?</h2>
-					<div id = "waffleSelect">
-						<input id = "waffle-yes" name = "waffle" type="radio" checked>
-						<label for = "waffle-yes">Yes</label>
-						<input id = "waffle-no" name = "waffle" type= "radio">
-						<label for = "waffle-no">No</label>
-					</div>
-					<br>
-					<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
-					<!-- <button id="deleteOrderButton">Delete Order</button> -->
-					<br>
-				</div>
-			</div>
-		</div>
+
+	<div id = "footer">
+		<?php
+		require_once("footer.php");
+		?>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="../js/script.js"></script>
+	<script src="../js/loadData.js"></script>
 	<script src="../js/sensationPage.js"></script>
 	<script src="../js/shoppingCart.js"></script>
 	<script>
