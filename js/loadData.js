@@ -17,6 +17,21 @@ function createData(jsonFile) {
   });
 }
 
+function createFlavorData(jsonFile) {
+  $.getJSON(jsonFile, function(data) {
+    
+    var tmp = '';
+    var flavors = [];
+    
+    for (const flavor of data["flavors"]) {
+      flavors.push(flavor);
+    }
+    for (flavor in flavors) {
+      console.log(flavors[flavor]);
+    }
+  })
+}
+
 function loadBasic() {
   console.log("Loading basic information");
 

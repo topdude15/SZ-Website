@@ -98,6 +98,24 @@ body {
 	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 }
 
+.flavors {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.flavor {
+	border: 1px solid red;
+	border-radius: 5px;
+	width: 30%;
+}
+.flavor input[type="checkbox"] {
+	appearance: none;
+}
+.flavor.checked {
+	border: 5px solid blue;
+}
+
+
 @media screen and (max-width: 1000px) {
   .menuItem {
   	border-radius: 10px;
@@ -121,5 +139,11 @@ body {
 	}
 	.topRightSensation {
 		width: 90%;
+	}
+	.flavors {
+		flex-direction: column;
+	}
+	.flavor {
+		width: 100%;
 	}
 }

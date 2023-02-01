@@ -1,4 +1,5 @@
 {
   "bases": ["Original", "Reduced Fat", "Custard", "Yogurt", "Lactose Free", "Keto (+$1.00)", "Vegan (+$1.00)"],
-  "sizes": ["Small", "Regular", "Large", "Pint"]
+  "sizes": ["Small", "Regular", "Large", "Pint"],
+  "flavors": ["Strawberry", "Raspberry", "Pina Colada", "Huckleberry", "Cherry", "Peach", "Green Apple", "Watermelon", "Blueberry", "Lime", "Lemon", "Tiger's Blood", "Mango", "Blackberry", "Orange", "Amaretto", "Banana", "Chocolate", "Nutella", "Peanut Butter", "Coconut", "Pistachio", "Mint", "Cheesecake", "Vanilla", "Caramel", "Cake Batter", "Dulce de Leche", "Coffee", "Marshmallow", "Bubble Gum", "Cotton Candy", "Butter Pecan"]
 }

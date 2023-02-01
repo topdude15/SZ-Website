@@ -63,3 +63,7 @@ const sels = document.querySelectorAll('.selects').forEach((item) => {
     }
   })
 })
+
+$(document).on("change", "input[type='checkbox']", function () {
+  $(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
+});

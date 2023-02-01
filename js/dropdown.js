@@ -1,80 +1,180 @@
-var x, i, j, l, ll, selElmnt, a, b, c;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-    /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
-    e.stopPropagation();
-    closeAllSelect(this);
-    this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
-  });
-}
+// //Varun Dewan 2019
+var $ = {
+   get: function(selector){ 
+      var ele = document.querySelectorAll(selector);
+      for(var i = 0; i < ele.length; i++){
+         this.init(ele[i]);
+      }
+      return ele;
+   },
+   template: function(html){
+      var template = document.createElement('div');
+      template.innerHTML = html.trim();
+      return this.init(template.childNodes[0]);
+   },
+   init: function(ele){
+      ele.on = function(event, func){ this.addEventListener(event, func); }
+      return ele;
+   }
+};
 
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
+//Build the plugin
+var drop = function(info){var o = {
+   options: info.options,
+   selected: info.selected || [],
+   preselected: info.preselected || [],
+   open: false,
+   html: {
+      select: $.get(info.selector)[0],
+      options: $.get(info.selector + ' option'),
+      parent: undefined,
+   },
+   init: function(){
+      //Setup Drop HTML
+      this.html.parent = $.get(info.selector)[0].parentNode
+      this.html.drop = $.template('<div class="drop"></div>')
+      this.html.dropDisplay = $.template('<div class="drop-display">Display</div>')
+      this.html.dropOptions = $.template('<div class="drop-options">Options</div>')
+      this.html.dropScreen = $.template('<div class="drop-screen"></div>')
+      
+      this.html.parent.insertBefore(this.html.drop, this.html.select)
+      this.html.drop.appendChild(this.html.dropDisplay)
+      this.html.drop.appendChild(this.html.dropOptions)
+      this.html.drop.appendChild(this.html.dropScreen)
+      //Hide old select
+      this.html.drop.appendChild(this.html.select);
+      
+      //Core Events
+      var that = this;
+      this.html.dropDisplay.on('click', function(){ that.toggle() });
+      this.html.dropScreen.on('click', function(){ that.toggle() });
+      //Run Render
+      this.load()
+      this.preselect()
+      this.render();
+   },
+   toggle: function(){
+      this.html.drop.classList.toggle('open');
+   },
+   addOption: function(e, element){ 
+      var index = Number(element.dataset.index);
+      this.clearStates()
+      this.selected.push({
+         index: Number(index),
+         state: 'add',
+         removed: false
+      })
+      this.options[index].state = 'remove';
+      this.render()
+   },
+   removeOption: function(e, element){
+      e.stopPropagation();
+      this.clearStates()
+      var index = Number(element.dataset.index);
+      this.selected.forEach(function(select){
+         if(select.index == index && !select.removed){
+            select.removed = true
+            select.state = 'remove'
+         }
+      })
+      this.options[index].state = 'add'
+      this.render();
+   },
+   load: function(){
+      this.options = [];
+      for(var i = 0; i < this.html.options.length; i++){
+         var option = this.html.options[i]
+         this.options[i] = {
+            html:  option.innerHTML,
+            value: option.value,
+            selected: option.selected,
+            state: ''
+         }
+      }
+   },
+   preselect: function(){
+      var that = this;
+      this.selected = [];
+      this.preselected.forEach(function(pre){
+         that.selected.push({
+            index: pre,
+            state: 'add',
+            removed: false
+         })
+         that.options[pre].state = 'remove';
+      })
+   },
+   render: function(){
+      this.renderDrop()
+      this.renderOptions()
+   },
+   renderDrop: function(){ 
+      var that = this;
+      var parentHTML = $.template('<div></div>')
+      this.selected.forEach(function(select, index){ 
+         var option = that.options[select.index];
+         var childHTML = $.template('<span class="item '+ select.state +'">'+ option.html +'</span>')
+         var childCloseHTML = $.template(
+            '<i class="material-icons btnclose" data-index="'+select.index+'">&#xe5c9;</i></span>')
+         childCloseHTML.on('click', function(e){ that.removeOption(e, this) })
+         childHTML.appendChild(childCloseHTML)
+         parentHTML.appendChild(childHTML)
+      })
+      this.html.dropDisplay.innerHTML = ''; 
+      this.html.dropDisplay.appendChild(parentHTML)
+   },
+   renderOptions: function(){  
+      var that = this;
+      var parentHTML = $.template('<div></div>')
+      this.options.forEach(function(option, index){
+         var childHTML = $.template(
+            '<a data-index="'+index+'" class="'+option.state+'">'+ option.html +'</a>')
+         childHTML.on('click', function(e){ that.addOption(e, this) })
+         parentHTML.appendChild(childHTML)
+      })
+      this.html.dropOptions.innerHTML = '';
+      this.html.dropOptions.appendChild(parentHTML)
+   },
+   clearStates: function(){
+      var that = this;
+      this.selected.forEach(function(select, index){ 
+         select.state = that.changeState(select.state)
+      })
+      this.options.forEach(function(option){ 
+         option.state = that.changeState(option.state)
+      })
+   },
+   changeState: function(state){
+      switch(state){
+         case 'remove':
+            return 'hide'
+         case 'hide':
+            return 'hide'
+         default:
+            return ''
+       }
+   },
+   isSelected: function(index){
+      var check = false
+      this.selected.forEach(function(select){ 
+         if(select.index == index && select.removed == false) check = true
+      })
+      return check
+   }
+}; o.init(); return o;}
 
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
+
+//Set up some data
+var options = [
+   { html: 'cats', value: 'cats' },
+   { html: 'fish', value: 'fish' },
+   { html: 'squids', value: 'squids' },
+   { html: 'cats', value: 'whales' },
+   { html: 'cats', value: 'bikes' },
+];
+
+var myDrop = new drop({
+   selector:  '#myMulti',
+   preselected: [0, 2]
+});
+ myDrop.toggle();
