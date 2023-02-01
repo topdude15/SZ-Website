@@ -17,6 +17,44 @@ function createData(jsonFile) {
   });
 }
 
+function loadBasic() {
+  console.log("Loading basic information");
+
+  var optionsFile = '../data/options.json';
+
+  var sizes = [];
+  var bases = [];
+
+  $.getJSON(optionsFile, function(data) {
+    for (const size of data["sizes"]) {
+      sizes.push(size);
+    }
+    for (const base of data["bases"]) {
+      bases.push(base);
+    }
+    for (var i = 0; i < sizes.length; i++) {
+      topRightSensationSize.innerHTML += '<option value="' + sizes[i] + '">' + sizes[i] + '</option>';
+    }
+
+    topRightSensationBase = document.getElementById('topRightSensationBase');
+
+    for (var i = 0; i < bases.length; i++) {
+      topRightSensationBase.innerHTML += '<option value = "' + bases[i] + '">' + bases[i] + '</option>';
+    }
+
+  /* Reload dropdown HTML to make options appear on first page load */
+    var sizeContent = topRightSensationSize.innerHTML;
+    topRightSensationSize.innerHTML = sizeContent;
+    var baseContent = topRightSensationBase.innerHTML;
+    topRightSensationBase.innerHTML = baseContent;
+  });
+
+  console.log(sizes);
+  console.log(bases);
+
+  
+}
+
 function loadSensation(sensId, sensationFile, optionsFile) {
   console.log("Loading sensation with ID of " + sensId);
 
@@ -36,37 +74,36 @@ function loadSensation(sensId, sensationFile, optionsFile) {
     var obj = data.find(function(sensation, index) {
     	if (sensation.id == sensId) {
         console.log("Creating sensation info");
-    		createSensationInfo(data[index], sizes, bases);
-    	}
+        createSensationInfo(data[index], sizes, bases);
+      }
     })
   });
 }
 
 function createSensationInfo(sensData, sizes, bases) {
-  console.log("In createSensationInfo function...")
 
   document.getElementById('topLeftSensation').innerHTML = '<img src = "../' + sensData.imagePath + '">';
 
   document.getElementById('topRightSensationInfo').innerHTML += '<h1>' + sensData.name + '</h1>';
   document.getElementById('topRightSensationInfo').innerHTML += '<p>' + sensData.description + '</p>';
 
-  console.log("Created page info, creating base and size data now...")
   topRightSensationSize = document.getElementById('topRightSensationSize');
 
   for (var i = 0; i < sizes.length; i++) {
-    console.log("Loading sizes...");
     topRightSensationSize.innerHTML += '<option value="' + sizes[i] + '">' + sizes[i] + '</option>';
   }
 
   topRightSensationBase = document.getElementById('topRightSensationBase');
 
   for (var i = 0; i < bases.length; i++) {
-    console.log("Loading bases...");
     topRightSensationBase.innerHTML += '<option value = "' + bases[i] + '">' + bases[i] + '</option>';
   }
 
-  console.log("Data should be available now");
-  //topRightSensationSize.contentWindows.location.reload(true);
+  /* Reload dropdown HTML to make options appear on first page load */
+  var sizeContent = topRightSensationSize.innerHTML;
+  topRightSensationSize.innerHTML = sizeContent;
+  var baseContent = topRightSensationBase.innerHTML;
+  topRightSensationBase.innerHTML = baseContent;
 }
 
 function updateCartNumber() {

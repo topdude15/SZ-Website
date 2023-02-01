@@ -89,7 +89,7 @@
 @media all and (max-width: 700px) {
 	#action-boxes {
 		flex-direction: column;
-		padding-bottom: 15%;
+		padding-bottom: 5%;
 	}
 	#banner {
 		flex-direction: column;
@@ -97,6 +97,12 @@
 	.mainLeft, .mainRight {
 		text-align: center;
 		width: 100%;
+	}
+	.action-box p {
+		width: 100%;
+	}
+	.action-box {
+		padding-bottom: 8%;
 	}
 }
 
@@ -120,11 +126,4 @@
 
 .custom-shape-divider-top-1669611750 .shape-fill {
 	fill: #AB2328;
-}
-
-
-@media all and (max-width: 700px) {
-	.action-box p {
-		width: 100%;
-	}
 }

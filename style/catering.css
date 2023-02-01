@@ -12,8 +12,9 @@
 }
 
 .event img {
-	width: 300px;
-	height: 300px;
+	width: 20vw;
+	height: 20vw;
+	object-fit: cover;
 	border-radius: 10px;
 }
 
@@ -21,5 +22,12 @@
 	#events {
 		flex-direction: column;
 		align-items: center;
+	}
+	.event {
+		padding-bottom: 6%;
+	}
+	.event img {
+		width: 60vw;
+		height: 60vw;
 	}
 }
