@@ -3,6 +3,7 @@
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/navbar.css">
 	<link rel="stylesheet" href="../style/cart.css">
+	<link rel="stylesheet" href="../style/footer.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 	<title>Sub Zero Ice Cream</title>
@@ -20,6 +21,11 @@
 		<div class = "container" id = "main">
 			<button id = "checkOutButton">Check Out</button>
 		</div>
+	</div>
+	<div id = "footer">
+		<?php
+			require_once("footer.php");
+		?>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../js/loadData.js"></script>

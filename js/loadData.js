@@ -27,10 +27,20 @@ function createFlavorData(jsonFile) {
       flavors.push(flavor);
     }
     for (flavor in flavors) {
-      console.log(flavors[flavor]);
+      console.log("creating flavor" + flavors[flavor])
+      tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\').click()">';
+      tmp += '<input type = "checkbox" id = "' + flavors[flavor] + '">';
+      tmp += '<label for = "' + flavors[flavor] + '">' + flavors[flavor] + '</label>';
+      tmp += '</div>';
     }
+    $('#flavors').append(tmp);
   })
 }
+
+// <div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
+//                   <input type = "checkbox" id="peanut-butter">
+//                   <label for="peanut-butter">Peanut Butter</label>
+//                 </div>
 
 function loadBasic() {
   console.log("Loading basic information");

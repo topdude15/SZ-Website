@@ -45,43 +45,7 @@
 								<option selected disabled hidden>Select Your Base...</option>
 							</select>
 							<h2>Choose Your Flavor(s)</h2>
-							<div class = "flavors">
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter">
-									<label for="peanut-butter">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter1">
-									<label for="peanut-butter1">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter2">
-									<label for="peanut-butter2">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter3">
-									<label for="peanut-butter3">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter4">
-									<label for="peanut-butter4">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter5">
-									<label for="peanut-butter5">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter6">
-									<label for="peanut-butter6">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter7">
-									<label for="peanut-butter7">Peanut Butter</label>
-								</div>
-								<div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-									<input type = "checkbox" id="peanut-butter8">
-									<label for="peanut-butter8">Peanut Butter</label>
-								</div>
+							<div class = "flavors" id = "flavors">
 							</div>
 							<h2>Would you like a waffle bowl?</h2>
 							<div id = "waffleSelect">
@@ -91,7 +55,7 @@
 								<label for = "waffle-no">No</label>
 							</div>
 							<br>
-							<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
+							<button type = "button" id="addToOrderCreateButton" class = "addToOrder" disabled> Add to Order</button>
 							<!-- <button id="deleteOrderButton">Delete Order</button> -->
 							<br>
 						</div>

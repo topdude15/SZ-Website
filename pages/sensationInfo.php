@@ -51,7 +51,7 @@
 							<label for = "waffle-no">No</label>
 						</div>
 						<br>
-						<button type = "button" id="addToOrderButton" disabled> Add to Order</button>
+						<button type = "button" id="addToOrderSensationButton" class = "addToOrder" disabled> Add to Order</button>
 						<br>
 					</div>
 				</div>

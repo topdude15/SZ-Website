@@ -104,15 +104,19 @@ body {
 	flex-wrap: wrap;
 }
 .flavor {
-	border: 1px solid red;
+	border: 1px solid #ced4da;
 	border-radius: 5px;
 	width: 30%;
+	background-color: white;
+	margin-bottom: 2%;
 }
 .flavor input[type="checkbox"] {
 	appearance: none;
 }
 .flavor.checked {
-	border: 5px solid blue;
+	background-color: #00a3e0;
+	color: white;
+	font-weight: bold;
 }
 
 

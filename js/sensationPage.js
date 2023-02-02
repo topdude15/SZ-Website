@@ -1,10 +1,16 @@
-var orderButton = document.getElementById("addToOrderButton");
-orderButton.addEventListener("click", addToOrder);
+if ($('#addToOrderSensationButton').length > 0) {
+  var orderButton = document.getElementById("addToOrderSensationButton");
+  orderButton.addEventListener("click", addToOrder);
+}
+if ($('#addToOrderCreateButton').length > 0) {
+  var createOrderButton = document.getElementById("addToOrderCreateButton");
+  createOrderButton.addEventListener("click", addToOrder)
+}
 
 // var deleteButton = document.getElementById("deleteOrderButton");
 // deleteButton.addEventListener("click", clearOrder);
 
-function addToOrder() {
+function addToOrder() { 
 
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
@@ -59,7 +65,12 @@ const sels = document.querySelectorAll('.selects').forEach((item) => {
       baseSelected = true;
     }
     if (sizeSelected && baseSelected) {
-      $('#addToOrderButton').prop('disabled', false);
+      if($('#addToOrderSensationButton').length > 0) {
+         $('#addToOrderSensationButton').prop('disabled', false);
+      }
+      if($('#addToOrderCreateButton').length > 0) {
+         $('#addToOrderCreateButton').prop('disabled', false);
+      }
     }
   })
 })

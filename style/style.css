@@ -158,8 +158,7 @@ input[type="radio"] {
 label {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 45%;
-	border: 1px solid white;
+	width: 100%;
 	text-align: center;
 	border-radius: 10px;
 	margin: 5px;
@@ -187,7 +186,7 @@ input[type="radio"]:not(:checked)+label:hover {
 
 /* Code for 'Add to Order' button on sensationInfo.html page, should reuse for create.html */
 
-#addToOrderButton {
+.addToOrder {
 	font-size: 30px;
 	padding: 2%;
 	width: 100%;
@@ -196,7 +195,7 @@ input[type="radio"]:not(:checked)+label:hover {
 	color: white;
 	border-radius: 10px;
 }
-#addToOrderButton:disabled {
+.addToOrder:disabled {
 	background-color: #171c8f;
 	color: gray;
 }
