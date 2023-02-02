@@ -24,7 +24,7 @@ function createFlavorData(jsonFile) {
     var flavors = [];
 
     $.each(data["flavors"], function(key, value) {
-      tmp += '<button type="button" class="collapsible">' + key + '</button>';
+      tmp += '<h3 class = "flavorTitle">' + key + '</h3>';
       tmp += '<div class = "flavorGroup">';
       for(flavor in value) {
         tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\' style="pointer-events:none").click()">';
@@ -33,7 +33,6 @@ function createFlavorData(jsonFile) {
         tmp += '</div>';
       }
       tmp += '</div>';
-      tmp += '<script>var coll = document.getElementsByClassName("collapsible"); var i; for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function() { this.classList.toggle("active"); var content = this.nextElementSibling; if (content.style.display === "flex") { content.style.display = "none"; } else { content.style.display = "flex"; } }); }</script>';
     });
     $('#flavors').append(tmp);
   })
