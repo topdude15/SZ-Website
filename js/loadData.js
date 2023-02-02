@@ -22,26 +22,22 @@ function createFlavorData(jsonFile) {
     
     var tmp = '';
     var flavors = [];
-    
-    for (const flavor of data["flavors"]) {
-      flavors.push(flavor);
-    }
-    for (flavor in flavors) {
-      console.log("creating flavor" + flavors[flavor])
-      tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\').click()">';
-      tmp += '<input type = "checkbox" id = "' + flavors[flavor] + '">';
-      tmp += '<label for = "' + flavors[flavor] + '">' + flavors[flavor] + '</label>';
+
+    $.each(data["flavors"], function(key, value) {
+      tmp += '<button type="button" class="collapsible">' + key + '</button>';
+      tmp += '<div class = "flavorGroup">';
+      for(flavor in value) {
+        tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\' style="pointer-events:none").click()">';
+        tmp += '<input type = "checkbox" id = "' + value[flavor] + '">';
+        tmp += '<label for = "' + value[flavor] + '">' + value[flavor] + '</label>';
+        tmp += '</div>';
+      }
       tmp += '</div>';
-    }
+      tmp += '<script>var coll = document.getElementsByClassName("collapsible"); var i; for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function() { this.classList.toggle("active"); var content = this.nextElementSibling; if (content.style.display === "flex") { content.style.display = "none"; } else { content.style.display = "flex"; } }); }</script>';
+    });
     $('#flavors').append(tmp);
   })
 }
-
-// <div class = "flavor" onclick="this.querySelector('input[type=checkbox]').click()">
-//                   <input type = "checkbox" id="peanut-butter">
-//                   <label for="peanut-butter">Peanut Butter</label>
-//                 </div>
-
 function loadBasic() {
   console.log("Loading basic information");
 
