@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="loadBasic(); createFlavorData('../data/options.json')">
+<body onload="loadBasic(); createFlavorData('../data/options.json'); createMixinData('../data/options.json')">
 	<div id = "navbar">
 		<?php
 			require_once("navbar.php");
@@ -46,6 +46,10 @@
 							</select>
 							<h2>Choose Your Flavor(s)</h2>
 							<div class = "flavors" id = "flavors">
+							</div>
+							<h2>Choose Your Mix-In(s)</h2>
+							<p>79¢ each</p>
+							<div class = "mixins" id = "mixins">
 							</div>
 							<h2>Would you like a waffle bowl?</h2>
 							<div id = "waffleSelect">
