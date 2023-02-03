@@ -10,54 +10,15 @@ if ($('#addToOrderCreateButton').length > 0) {
 // var deleteButton = document.getElementById("deleteOrderButton");
 // deleteButton.addEventListener("click", clearOrder);
 
-<<<<<<< HEAD
+
 function addToOrder(type) {
-=======
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-
-function addToOrder() { 
-<<<<<<< HEAD
->>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
-=======
->>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
-
+  
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
   let waffleSelection = document.getElementById("waffle-yes").checked;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   if (type == "sensation") {
-=======
-  let params = (new URL(document.location)).searchParams;
-  let sensId = params.get("sensId");
->>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
-
-  var sensData;
-
-  $.getJSON("../data/sensations.json", function(data) {
-    var obj = data.find(function(sensation, index) {
-      if (sensation.id == sensId) {
-        sensData = data[index];
-
-        var currentData = sessionStorage.getItem("szOrder");
-        var newData = "";
-
-=======
-
+  
   let params = (new URL(document.location)).searchParams;
   let sensId = params.get("sensId");
 
@@ -71,7 +32,20 @@ function addToOrder() {
         var currentData = sessionStorage.getItem("szOrder");
         var newData = "";
 
->>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
+
+  let params = (new URL(document.location)).searchParams;
+  let sensId = params.get("sensId");
+
+  var sensData;
+
+  $.getJSON("../data/sensations.json", function(data) {
+    var obj = data.find(function(sensation, index) {
+      if (sensation.id == sensId) {
+        sensData = data[index];
+
+        var currentData = sessionStorage.getItem("szOrder");
+        var newData = "";
+     
         if (currentData == null) {
           const newOrderId = revisedRandId();
           const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
@@ -83,22 +57,15 @@ function addToOrder() {
         }
       }
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
+    
   } else if (type == "create") {
-    console.log("creating create")''
+  
     var flavors = [];
     var mixins = [];
 
     var currentData = sessionStorage.getItem("szOrder");
     var newData = "";
     
-    document.querySelectorAll('input[name="flavor"]:checked').forEach(function(elem) {
-      flavors.push(elem.id);
-    })
-    document.querySelectorAll('input[name="mixin]:checked').forEach(function(elem) {
-      mixins.push(elem.id);
-    })
     if (currentData == null) {
       console.log("Current order does not exist");
       const newOrderId = revisedRandId();
