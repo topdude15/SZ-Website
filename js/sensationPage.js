@@ -14,28 +14,13 @@ if ($('#addToOrderCreateButton').length > 0) {
 // var deleteButton = document.getElementById("deleteOrderButton");
 // deleteButton.addEventListener("click", clearOrder);
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-
 function addToOrder(type) {
 
-  if (type == "sensation") {
+  let selectedSize = document.getElementById("topRightSensationSize").value;
+  let selectedBase = document.getElementById("topRightSensationBase").value;
+  let waffleSelection = document.getElementById("waffle-yes").checked;
 
-    let selectedSize = document.getElementById("topRightSensationSize").value;
-    let selectedBase = document.getElementById("topRightSensationBase").value;
-    let waffleSelection = document.getElementById("waffle-yes").checked;
+  if (type == "sensation") {
 
     let params = (new URL(document.location)).searchParams;
     let sensId = params.get("sensId");
@@ -65,15 +50,30 @@ function addToOrder(type) {
       updateCartNumber();
     })
   } else if (type == "create") {
+    console.log("creating create")''
     var flavors = [];
     var mixins = [];
 
+    var currentData = sessionStorage.getItem("szOrder");
+    var newData = "";
+    
     document.querySelectorAll('input[name="flavor"]:checked').forEach(function(elem) {
       flavors.push(elem.id);
     })
     document.querySelectorAll('input[name="mixin]:checked').forEach(function(elem) {
       mixins.push(elem.id);
     })
+    if (currentData == null) {
+      console.log("Current order does not exist");
+      const newOrderId = revisedRandId();
+      const order = {"orderId": newOrderId, "orderItems": [{"itemType": "create", "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors}]};
+      sessionStorage.setItem("szOrder", JSON.stringify(order));
+    } else {
+      console.log("Current order exists");
+      var order = JSON.parse(currentData);
+      order.orderItems.push({"itemType": "create", "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors});
+      sessionStorage.setItem("szOrder", JSON.stringify(order));
+    }
   }
 }
 
