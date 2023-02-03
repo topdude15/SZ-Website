@@ -30,12 +30,13 @@ for (i = 0; i < coll.length; i++) {
 }
 
 function addToOrder(type) {
+  
+  let selectedSize = document.getElementById("topRightSensationSize").value;
+  let selectedBase = document.getElementById("topRightSensationBase").value;
+  let waffleSelection = document.getElementById("waffle-yes").checked;
+
 
   if (type == "sensation") {
-
-    let selectedSize = document.getElementById("topRightSensationSize").value;
-    let selectedBase = document.getElementById("topRightSensationBase").value;
-    let waffleSelection = document.getElementById("waffle-yes").checked;
 
     let params = (new URL(document.location)).searchParams;
     let sensId = params.get("sensId");
@@ -71,9 +72,24 @@ function addToOrder(type) {
     document.querySelectorAll('input[name="flavor"]:checked').forEach(function(elem) {
       flavors.push(elem.id);
     })
-    document.querySelectorAll('input[name="mixin]:checked').forEach(function(elem) {
+    document.querySelectorAll('input[name="mixin"]:checked').forEach(function(elem) {
       mixins.push(elem.id);
     })
+
+    var currentData = sessionStorage.getItem("szOrder");
+    var newData = "";
+
+    if (currentData == null) {
+      const newOrderId = revisedRandId();
+      const order = {"orderId": newOrderId, "orderItems": [{"itemType": "create", "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors}]};
+      console.log(order);
+      sessionStorage.setItem("szOrder", JSON.stringify(order));
+    } else {
+      var order = JSON.parse(currentData);
+      order.orderItems.push({"itemType": "create", "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors});
+      console.log(order);
+      sessionStorage.setItem("szOrder", JSON.stringify(order));
+    }
   }
 }
 
