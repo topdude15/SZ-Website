@@ -1,54 +1,69 @@
 if ($('#addToOrderSensationButton').length > 0) {
   var orderButton = document.getElementById("addToOrderSensationButton");
-  orderButton.addEventListener("click", function() {
-    addToOrder("sensation");
-  });
+  orderButton.addEventListener("click", addToOrder);
 }
 if ($('#addToOrderCreateButton').length > 0) {
   var createOrderButton = document.getElementById("addToOrderCreateButton");
-  createOrderButton.addEventListener("click", function() {
-    addToOrder("create");
-  })
+  createOrderButton.addEventListener("click", addToOrder)
 }
 
 // var deleteButton = document.getElementById("deleteOrderButton");
 // deleteButton.addEventListener("click", clearOrder);
 
+<<<<<<< HEAD
 function addToOrder(type) {
+=======
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+function addToOrder() { 
+>>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
 
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
   let waffleSelection = document.getElementById("waffle-yes").checked;
 
+<<<<<<< HEAD
   if (type == "sensation") {
+=======
+  let params = (new URL(document.location)).searchParams;
+  let sensId = params.get("sensId");
+>>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
 
-    let params = (new URL(document.location)).searchParams;
-    let sensId = params.get("sensId");
+  var sensData;
 
-    var sensData;
+  $.getJSON("../data/sensations.json", function(data) {
+    var obj = data.find(function(sensation, index) {
+      if (sensation.id == sensId) {
+        sensData = data[index];
 
-    $.getJSON("../data/sensations.json", function(data) {
-      var obj = data.find(function(sensation, index) {
-        if (sensation.id == sensId) {
-          sensData = data[index];
+        var currentData = sessionStorage.getItem("szOrder");
+        var newData = "";
 
-          var currentData = sessionStorage.getItem("szOrder");
-          var newData = "";
-
-          if (currentData == null) {
-            const newOrderId = revisedRandId();
-            const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
-            sessionStorage.setItem("szOrder", JSON.stringify(order));
-          } else {
-            var order = JSON.parse(currentData);
-            order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection});
-            sessionStorage.setItem("szOrder", JSON.stringify(order));
-          }
+        if (currentData == null) {
+          const newOrderId = revisedRandId();
+          const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
+          sessionStorage.setItem("szOrder", JSON.stringify(order));
+        } else {
+          var order = JSON.parse(currentData);
+          order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection});
+          sessionStorage.setItem("szOrder", JSON.stringify(order));
         }
-      })
-      updateShoppingCart();
-      updateCartNumber();
+      }
     })
+<<<<<<< HEAD
   } else if (type == "create") {
     console.log("creating create")''
     var flavors = [];
@@ -75,6 +90,11 @@ function addToOrder(type) {
       sessionStorage.setItem("szOrder", JSON.stringify(order));
     }
   }
+=======
+    updateShoppingCart();
+    updateCartNumber();
+  })
+>>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
 }
 
 function clearOrder() {
@@ -98,13 +118,13 @@ const sels = document.querySelectorAll('.selects').forEach((item) => {
     }
     if (sizeSelected && baseSelected) {
       if($('#addToOrderSensationButton').length > 0) {
-       $('#addToOrderSensationButton').prop('disabled', false);
-     }
-     if($('#addToOrderCreateButton').length > 0) {
-       $('#addToOrderCreateButton').prop('disabled', false);
-     }
-   }
- })
+         $('#addToOrderSensationButton').prop('disabled', false);
+      }
+      if($('#addToOrderCreateButton').length > 0) {
+         $('#addToOrderCreateButton').prop('disabled', false);
+      }
+    }
+  })
 })
 
 $(document).on("change", "input[type='checkbox']", function () {

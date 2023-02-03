@@ -64,7 +64,7 @@
 		<div class = "action-box">
 			<img src = "../img/customized.png"></i>
 			<h2>Customized</h2>
-			<p>Pick the flavors you want to share. Nothing compares to freshly frozen ice cream, made specifically for you.</p>
+			<p>Pick the flavors you want to share. Nothing comapres to freshly frozen ice cream, made specifically for you.</p>
 		</div>
 		<div class = "action-box">
 			<img src = "../img/hasslefree.png"></i>
@@ -89,17 +89,17 @@
 			<div class = "event">
 				<img src="../img/business.jpg">
 				<h2>Business</h2>
-				<p>Employee Appreciation, Customer Appreciation, Team Building Events, Conferences</p>
+				<p>Business Events</p>
 			</div>
 			<div class = "event">
 				<img src="../img/celebration.jpg">
-				<h2>Celebrations</h2>
-				<p>Birthdays, Engagements, Christenings and Celebrations, Reunions, Beach Parties</p>
+				<h2>Business</h2>
+				<p>Business Events</p>
 			</div>
 			<div class = "event">
 				<img src="../img/wedding.jpg">
-				<h2>Weddings</h2>
-				<p>Bespoke Menu Planning, Wedding Coordination and Management</p>
+				<h2>Business</h2>
+				<p>Business Events</p>
 			</div>
 
 		</section>
