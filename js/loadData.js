@@ -27,7 +27,7 @@ function createFlavorData(jsonFile) {
       tmp += '<p class = "flavorTitle">' + key + '</p>';
       tmp += '<div class = "flavorGroup">';
       for(flavor in value) {
-        tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\' style="pointer-events:none").click()">';
+        tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\' style=\'pointer-events:none\').click()">';
         tmp += '<input type = "checkbox" name = "flavor" id = "' + value[flavor] + '">';
         tmp += '<label for = "' + value[flavor] + '">' + value[flavor] + '</label>';
         tmp += '</div>';

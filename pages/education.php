@@ -76,12 +76,12 @@
               <div class="faq-body">
                 <p class = "faqText">Sub Zero will adapt the presentation material to the grade level of the students, but we cover the following educational scientific topics:</p>
                 <ul>
-                  <li class = "faqListItem">Nitrogen Safety</li>
-                  <li class = "faqListItem">Atmosphere</li>
-                  <li class = "faqListItem">Elements: Nitrogen</li>
-                  <li class = "faqListItem">Condensation/Evaporation</li>
-                  <li class = "faqListItem">The Ideal Gas Law</li>
-                  <li class = "faqListItem">Water Crystal Structure</li>
+                  <li>Nitrogen Safety</li>
+                  <li>Atmosphere</li>
+                  <li>Elements: Nitrogen</li>
+                  <li>Condensation/Evaporation</li>
+                  <li>The Ideal Gas Law</li>
+                  <li>Water Crystal Structure</li>
                 </ul>
               </div>
             </div>
@@ -119,18 +119,18 @@
                       <!-- faq answer -->
                       <div class="faq-body">
                         <ul>
-                          <li class = "faqListItem">States of Matter and how that relates to the conditions</li>
-                          <li class = "faqListItem">What is in the Atmosphere</li>
-                          <li class = "faqListItem">Condensation and Evaporation</li>
-                          <li class = "faqListItem">How this relates to heat transfer</li>
-                          <li class = "faqListItem">Ideal Gas Law PV=nRT and how you can visualize the equation in action</li>
-                          <li class = "faqListItem">Gas Expansion and Contraction</li>
-                          <li class = "faqListItem">Testing observations or Hypothesis</li>
-                          <li class = "faqListItem">Pressure effect from heat transfer causing liquid to gas expansion</li>
-                          <li class = "faqListItem">Water and Hydrogen bonding</li>
-                          <li class = "faqListItem">How Hydrogen bonding makes water a fluid</li>
-                          <li class = "faqListItem">Water crystal structure and how hydrogen bonding makes the shape of a snowflake</li>
-                          <li class = "faqListItem">How water crystal formation effects the texture of ice cream</li>
+                          <li>States of Matter and how that relates to the conditions</li>
+                          <li>What is in the Atmosphere</li>
+                          <li>Condensation and Evaporation</li>
+                          <li>How this relates to heat transfer</li>
+                          <li>Ideal Gas Law PV=nRT and how you can visualize the equation in action</li>
+                          <li>Gas Expansion and Contraction</li>
+                          <li>Testing observations or Hypothesis</li>
+                          <li>Pressure effect from heat transfer causing liquid to gas expansion</li>
+                          <li>Water and Hydrogen bonding</li>
+                          <li>How Hydrogen bonding makes water a fluid</li>
+                          <li>Water crystal structure and how hydrogen bonding makes the shape of a snowflake</li>
+                          <li>How water crystal formation effects the texture of ice cream</li>
                         </ul>
                       </div>
                     </div>
