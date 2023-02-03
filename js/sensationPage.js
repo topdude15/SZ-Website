@@ -29,11 +29,15 @@ for (i = 0; i < coll.length; i++) {
 }
 
 function addToOrder() { 
+<<<<<<< HEAD
+>>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
+=======
 >>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
 
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
   let waffleSelection = document.getElementById("waffle-yes").checked;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (type == "sensation") {
@@ -52,6 +56,22 @@ function addToOrder() {
         var currentData = sessionStorage.getItem("szOrder");
         var newData = "";
 
+=======
+
+  let params = (new URL(document.location)).searchParams;
+  let sensId = params.get("sensId");
+
+  var sensData;
+
+  $.getJSON("../data/sensations.json", function(data) {
+    var obj = data.find(function(sensation, index) {
+      if (sensation.id == sensId) {
+        sensData = data[index];
+
+        var currentData = sessionStorage.getItem("szOrder");
+        var newData = "";
+
+>>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
         if (currentData == null) {
           const newOrderId = revisedRandId();
           const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
@@ -63,6 +83,7 @@ function addToOrder() {
         }
       }
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
   } else if (type == "create") {
     console.log("creating create")''
@@ -90,12 +111,10 @@ function addToOrder() {
       sessionStorage.setItem("szOrder", JSON.stringify(order));
     }
   }
-=======
+
     updateShoppingCart();
     updateCartNumber();
   })
->>>>>>> parent of 0dc1b17 (Added functionality to grab selected flavors and mixins)
-}
 
 function clearOrder() {
   sessionStorage.removeItem("szOrder");
