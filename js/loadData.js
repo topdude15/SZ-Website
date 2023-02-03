@@ -24,17 +24,36 @@ function createFlavorData(jsonFile) {
     var flavors = [];
 
     $.each(data["flavors"], function(key, value) {
-      tmp += '<h3 class = "flavorTitle">' + key + '</h3>';
+      tmp += '<p class = "flavorTitle">' + key + '</p>';
       tmp += '<div class = "flavorGroup">';
       for(flavor in value) {
         tmp += '<div class = "flavor" onclick="this.querySelector(\'input[type=checkbox]\' style="pointer-events:none").click()">';
-        tmp += '<input type = "checkbox" id = "' + value[flavor] + '">';
+        tmp += '<input type = "checkbox" name = "flavor" id = "' + value[flavor] + '">';
         tmp += '<label for = "' + value[flavor] + '">' + value[flavor] + '</label>';
         tmp += '</div>';
       }
       tmp += '</div>';
     });
     $('#flavors').append(tmp);
+  })
+}
+function createMixinData(jsonFile) {
+  $.getJSON(jsonFile, function(data) {
+    var tmp = '';
+    var mixins = [];
+
+    for (const mixin of data["mixins"]) {
+      mixins.push(mixin);
+    }
+
+    for (mixin of mixins) {
+      console.log(mixin);
+      tmp += '<div class = "mixin" onclick="this.querySelector(\'input[type=checkbox]\' style="pointer-events:none").click()">';
+      tmp += '<input type = "checkbox" name = "mixin" id = "' + mixin + '">';
+      tmp += '<label for = "' + mixin + '">' + mixin + '</label>';
+      tmp += '</div>';
+    }
+    $('#mixins').append(tmp);
   })
 }
 function loadBasic() {

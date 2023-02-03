@@ -12,6 +12,8 @@
 }
 
 .event img {
+	display: flex;
+	margin: auto;
 	width: 20vw;
 	height: 20vw;
 	object-fit: cover;

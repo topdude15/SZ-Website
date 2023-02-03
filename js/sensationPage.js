@@ -1,10 +1,14 @@
 if ($('#addToOrderSensationButton').length > 0) {
   var orderButton = document.getElementById("addToOrderSensationButton");
-  orderButton.addEventListener("click", addToOrder);
+  orderButton.addEventListener("click", function() {
+    addToOrder("sensation");
+  });
 }
 if ($('#addToOrderCreateButton').length > 0) {
   var createOrderButton = document.getElementById("addToOrderCreateButton");
-  createOrderButton.addEventListener("click", addToOrder)
+  createOrderButton.addEventListener("click", function() {
+    addToOrder("create");
+  })
 }
 
 // var deleteButton = document.getElementById("deleteOrderButton");
@@ -25,39 +29,52 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function addToOrder() { 
+function addToOrder(type) {
 
-  let selectedSize = document.getElementById("topRightSensationSize").value;
-  let selectedBase = document.getElementById("topRightSensationBase").value;
-  let waffleSelection = document.getElementById("waffle-yes").checked;
+  if (type == "sensation") {
 
-  let params = (new URL(document.location)).searchParams;
-  let sensId = params.get("sensId");
+    let selectedSize = document.getElementById("topRightSensationSize").value;
+    let selectedBase = document.getElementById("topRightSensationBase").value;
+    let waffleSelection = document.getElementById("waffle-yes").checked;
 
-  var sensData;
+    let params = (new URL(document.location)).searchParams;
+    let sensId = params.get("sensId");
 
-  $.getJSON("../data/sensations.json", function(data) {
-    var obj = data.find(function(sensation, index) {
-      if (sensation.id == sensId) {
-        sensData = data[index];
+    var sensData;
 
-        var currentData = sessionStorage.getItem("szOrder");
-        var newData = "";
+    $.getJSON("../data/sensations.json", function(data) {
+      var obj = data.find(function(sensation, index) {
+        if (sensation.id == sensId) {
+          sensData = data[index];
 
-        if (currentData == null) {
-          const newOrderId = revisedRandId();
-          const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
-          sessionStorage.setItem("szOrder", JSON.stringify(order));
-        } else {
-          var order = JSON.parse(currentData);
-          order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection});
-          sessionStorage.setItem("szOrder", JSON.stringify(order));
+          var currentData = sessionStorage.getItem("szOrder");
+          var newData = "";
+
+          if (currentData == null) {
+            const newOrderId = revisedRandId();
+            const order = {"orderId": newOrderId, "orderItems": [{"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection}]};
+            sessionStorage.setItem("szOrder", JSON.stringify(order));
+          } else {
+            var order = JSON.parse(currentData);
+            order.orderItems.push({"itemType": "sensation", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection});
+            sessionStorage.setItem("szOrder", JSON.stringify(order));
+          }
         }
-      }
+      })
+      updateShoppingCart();
+      updateCartNumber();
     })
-    updateShoppingCart();
-    updateCartNumber();
-  })
+  } else if (type == "create") {
+    var flavors = [];
+    var mixins = [];
+
+    document.querySelectorAll('input[name="flavor"]:checked').forEach(function(elem) {
+      flavors.push(elem.id);
+    })
+    document.querySelectorAll('input[name="mixin]:checked').forEach(function(elem) {
+      mixins.push(elem.id);
+    })
+  }
 }
 
 function clearOrder() {
@@ -81,13 +98,13 @@ const sels = document.querySelectorAll('.selects').forEach((item) => {
     }
     if (sizeSelected && baseSelected) {
       if($('#addToOrderSensationButton').length > 0) {
-         $('#addToOrderSensationButton').prop('disabled', false);
-      }
-      if($('#addToOrderCreateButton').length > 0) {
-         $('#addToOrderCreateButton').prop('disabled', false);
-      }
-    }
-  })
+       $('#addToOrderSensationButton').prop('disabled', false);
+     }
+     if($('#addToOrderCreateButton').length > 0) {
+       $('#addToOrderCreateButton').prop('disabled', false);
+     }
+   }
+ })
 })
 
 $(document).on("change", "input[type='checkbox']", function () {

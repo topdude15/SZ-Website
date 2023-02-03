@@ -2,8 +2,9 @@
   "bases": ["Original", "Reduced Fat", "Custard", "Yogurt", "Lactose Free", "Keto (+$1.00)", "Vegan (+$1.00)"],
   "sizes": ["Small", "Regular", "Large", "Pint"],
   "flavors": {
-    "Fruit": ["Strawberry", "Raspberry", "Pina Colada", "Huckleberry", "Cherry", "Peach", "Green Apple", "Watermelon", "Blueberry", "Lime", "Lemon", "Tiger's Blood", "Mango", "Blackberry", "Orange", "Amaretto", "Banana"],
-    "Chocolate & Nut": ["Chocolate", "Nutella", "Peanut Butter", "Coconut", "Pistachio"],
-    "Sweet Tooth": ["Mint", "Cheesecake", "Vanilla", "Caramel", "Cake Batter", "Dulce de Leche", "Coffee", "Marshmallow", "Cotton Candy", "Butter Pecan"]
-  }
+    "Fruit": ["Amaretto","Banana","Blackberry","Blueberry","Cherry","Green Apple","Huckleberry","Lemon","Lime","Mango","Orange","Peach","Pina Colada","Raspberry","Strawberry","Tiger's Blood","Watermelon"],
+    "Chocolate & Nut": ["Chocolate","Coconut","Nutella","Peanut Butter","Pistachio"],
+    "Sweet Tooth": ["Butter Pecan","Cake Batter","Caramel","Cheesecake","Coffee","Cotton Candy","Dulce de Leche","Marshmallow","Mint","Vanilla"]
+  },
+  "mixins": ["Almonds", "Andes Mints", "Brownies", "Bubble Gum", "Butterfinger", "Cheesecake", "Cherries", "Chocolate Flakes", "Coconut Flakes", "Cookie Dough", "Fruity Pebbles", "Graham Cracker", "Gummy Bears", "Heath", "Kit Kat", "M&M", "Mangoes", "Marshmallows", "Mixed Berries", "Oreo", "Peaches", "Peanuts", "Pecans", "Pretzels", "Raspberries", "Reese's PB Cups", "Reese's Pieces", "Snickers", "Sprinkles", "Strawberries", "Twix", "Waffle Cone Pieces", "Walnuts"]
 }
