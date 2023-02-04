@@ -26,7 +26,7 @@ function loadShoppingCart() {
       tmp += '<p class = "cartSubtitle">Base: ' + currentOrder.orderItems[i].itemBase + '</p>';
       tmp += '<p class = "cartSubtitle">Waffle Included: ' + (currentOrder.orderItems[i].includeWaffle ? "Yes" : "No") + '</p>';
       tmp += '<p class = "cartSubtitle">Flavors: ' + formattedFlavors;
-      tmp += '<p class = "cartSubtitle">Mixins: ' + formattedMixins;
+      tmp += '<p class = "cartSubtitle">Mix-Ins: ' + formattedMixins;
       tmp += '</div>';
     }
   }

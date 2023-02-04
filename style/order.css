@@ -99,6 +99,41 @@ body {
 	line-height: 60px;
 	font-family: 'Gotham Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 }
+
+
+/* Code for radio buttons for waffle input on sensationInfo.html page */
+input[type="radio"] {
+	display: none;
+}
+label {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+	margin: 5px;
+	display: inline-block;
+}
+input[type="radio"]:checked + label {
+	background-color: #00a3e0;
+	cursor: default;
+	color: white;
+}
+input[type="radio"]:not(:checked)+label {
+	border: 1px solid darkblue;
+}
+input[type="radio"]:not(:checked)+label:hover {
+	border: 1px solid #00a3e0;
+}
+#waffleSelect {
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+.waffleSelect input[type="radio"] {
+	margin: auto;
+}
+
 .flavor, .mixin {
 	border: 1px solid #ced4da;
 	border-radius: 5px;
@@ -124,6 +159,22 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+}
+
+/* Code for 'Add to Order' button on sensationInfo.html page, should reuse for create.html */
+
+.addToOrder {
+	font-size: 30px;
+	padding: 2%;
+	width: 100%;
+	border: none;
+	background-color: #00a3e0;
+	color: white;
+	border-radius: 10px;
+}
+.addToOrder:disabled {
+	background-color: #171c8f;
+	color: gray;
 }
 
 @media screen and (max-width: 1000px) {

@@ -8,6 +8,10 @@
     padding-bottom: 3%;
     font-family: 'Montserrat', sans-serif;
 }
+.faqListItem {
+    font-size: calc(0.8rem + (20 * (100vw - 400px)/ 3500));
+    font-family: 'Montserrat', sans-serif;
+}
 /*li {
     font-size: calc(0.9rem + (20 * (100vw - 400px)/ 3500));
     padding-bottom: 2%;

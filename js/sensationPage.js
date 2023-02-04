@@ -69,7 +69,7 @@ function addToOrder(type) {
       sessionStorage.setItem("szOrder", JSON.stringify(order));
     } else {
       var order = JSON.parse(currentData);
-      order.orderItems.push({"itemType": "create", "sensationId": sensData.id, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors});
+      order.orderItems.push({"itemType": "create", "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors});
       sessionStorage.setItem("szOrder", JSON.stringify(order));
     }
 
