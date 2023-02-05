@@ -19,8 +19,9 @@
 	</div>
 	<div class = "content">
 		<div class = "container" id = "main">
-			<button id = "checkOutButton">Check Out</button>
+			
 		</div>
+		<button id = "checkOutButton">Check Out</button>
 	</div>
 	<div id = "footer">
 		<?php

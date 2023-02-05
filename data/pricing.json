@@ -4,5 +4,11 @@
 		"Regular": 5.29,
 		"Large": 6.19,
 		"Pint": 7.09
+	},
+	"create": {
+		"Small": 4.09,
+		"Regular": 4.79,
+		"Large": 5.49,
+		"Pint": 6.39
 	}
 }
