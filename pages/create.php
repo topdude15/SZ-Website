@@ -31,6 +31,8 @@
 			<div class = "sensationContent">
 				<div class = "container" id = "sensationInfo">
 					<div class = "topLeftSensation" id = "topLeftSensation">
+						<h2>How does it work</h2>
+						<p>First, select your ice cream size.  Then choose your base and flavors and mixins.  Decide whether you want a waffle bowl.</p>
 					</div>
 					<div class = "topRightSensation" id = "topRightSensation">
 						<div id = "topRightSensationInfo">

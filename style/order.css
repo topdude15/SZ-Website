@@ -172,6 +172,12 @@ input[type="radio"]:not(:checked)+label:hover {
 	color: white;
 	border-radius: 10px;
 }
+.addToOrder:hover {
+	background-color: #0089BA;
+}
+.addToOrder:active {
+	opacity: 0.8;
+}
 .addToOrder:disabled {
 	background-color: #171c8f;
 	color: gray;
@@ -204,10 +210,10 @@ input[type="radio"]:not(:checked)+label:hover {
 	.topRightSensation {
 		width: 90%;
 	}
-	.flavors {
+	.flavors, .mixins {
 		flex-direction: column;
 	}
-	.flavor {
+	.flavor, .mixin {
 		margin-left: 0%;
 		width: 100%;
 	}

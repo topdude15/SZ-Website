@@ -9,13 +9,18 @@ function updateShoppingCart() {
 
 function loadShoppingCart() {
   let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
-  console.log(currentOrder);
+
   var tmp = '';
-  var sens = '';
+  if (currentOrder == null) {
+    console.log("Cart is empty");
+    tmp += '<h2>Your cart is empty</h2>';
+    $('#main').append(tmp);
+  } else {
+
+  }
 
   let subtotal = 0;
   $.getJSON("../data/sensations.json", function(data) {
-    console.log(currentOrder.orderItems.length);
     for(i = 0; i < currentOrder.orderItems.length; i++) {
      if (currentOrder.orderItems[i].itemType == "sensation") {
       var obj = data.find(function(sensation, index) {
@@ -50,8 +55,7 @@ function loadShoppingCart() {
     }
   }
   $('#main').append(tmp);
-  console.log(subtotal);
-})
+  })
 }
 function calculatePricing() {
   let currentOrder = JSON.parse(sessionStorage.getItem("szOrder"));
