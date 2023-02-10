@@ -6,5 +6,5 @@
     "Chocolate & Nut": ["Chocolate", "Nutella", "Peanut Butter", "Coconut", "Pistachio"],
     "Sweet Tooth": ["Mint", "Cheesecake", "Vanilla", "Caramel", "Cake Batter", "Dulce de Leche", "Coffee", "Marshmallow", "Cotton Candy", "Butter Pecan"]
   },
-   "mixins": ["Almonds", "Andes Mints", "Brownies", "Bubble Gum", "Butterfinger", "Cheesecake", "Cherries", "Chocolate Flakes", "Coconut Flakes", "Cookie Dough", "Fruity Pebbles", "Graham Cracker", "Gummy Bears", "Heath", "Kit Kat", "M&M", "Mangoes", "Marshmallows", "Mixed Berries", "Oreo", "Peaches", "Peanuts", "Pecans", "Pretzels", "Raspberries", "Reese's PB Cups", "Reese's Pieces", "Snickers", "Sprinkles", "Strawberries", "Twix", "Waffle Cone Pieces", "Walnuts"]
+   "mixins": ["Almonds", "Andes Mints", "Brownies", "Bubble Gum", "Butterfinger", "Cheesecake Bites", "Cherries", "Chocolate Flakes", "Coconut Flakes", "Cookie Dough", "Fruity Pebbles", "Graham Cracker", "Gummy Bears", "Heath", "Kit Kat", "M&M", "Mangoes", "Marshmallows", "Mixed Berries", "Oreo", "Peaches", "Peanuts", "Pecans", "Pretzels", "Raspberries", "Reese's PB Cups", "Reese's Pieces", "Snickers", "Sprinkles", "Strawberries", "Twix", "Waffle Cone Pieces", "Walnuts"]
 }

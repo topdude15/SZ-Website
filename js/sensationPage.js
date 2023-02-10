@@ -1,13 +1,98 @@
+let base = document.getElementById("topRightSensationBase");
+let size = document.getElementById("topRightSensationSize");
+
 if ($('#addToOrderSensationButton').length > 0) {
   var orderButton = document.getElementById("addToOrderSensationButton");
   orderButton.addEventListener("click", function() {
     addToOrder("sensation");
   });
+  size.addEventListener("change", function() {
+    calculateCurrentSensationPrice();
+  })
+  base.addEventListener("change", function() {
+    calculateCurrentSensationPrice();
+  })
 }
 if ($('#addToOrderCreateButton').length > 0) {
   var createOrderButton = document.getElementById("addToOrderCreateButton");
   createOrderButton.addEventListener("click", function() {
     addToOrder("create");
+  })
+  size.addEventListener("change", function() {
+    calculateCurrentCreatePrice();
+  })
+  base.addEventListener("change", function() {
+    calculateCurrentCreatePrice();
+  })
+  let mixins = document.querySelectorAll("input[name=mixin]");
+  console.log("Selected all mixins");
+  mixins.forEach(function(mixin) {
+    console.log("addiung");
+    mixin.addEventListener("change", function() {
+      calculateCurrentCreatePrice();
+    })
+  })
+}
+
+function calculateCurrentCreatePrice() {
+  let selectedSize = document.getElementById("topRightSensationSize").value;
+  let selectedBase = document.getElementById("topRightSensationBase").value;
+  let waffleSelection = document.getElementById("waffle-yes").checked;
+  let addButton = document.getElementById("addToOrderCreateButton");
+
+
+  var mixins = [];
+
+  document.querySelectorAll('input[name="mixin"]:checked').forEach(function(elem) {
+    mixins.push(elem.id);
+  })
+  $.getJSON("../data/pricing.json", function(data) {
+
+    let price = 0;
+
+    $.each(data["create"], function(key, value) {
+      if (selectedSize == key) {
+        price += value;
+      }
+    })
+
+    if (selectedBase.includes('$')) {
+      let re = /\$\d+(\.\d{2})?/;
+      let match = re.exec(selectedBase);
+      let amount = parseFloat(match[0].replace("$", ""));
+      price += amount;
+    }
+    for(i = 0; i < mixins.length; i++) {
+      price += data["mixin"];
+    }
+    addButton.innerHTML = "Add to Order - $" + (Math.round(price * 100) / 100);
+  })
+}
+
+
+
+function calculateCurrentSensationPrice() {
+  let selectedSize = document.getElementById("topRightSensationSize").value;
+  let selectedBase = document.getElementById("topRightSensationBase").value;
+  let addButton = document.getElementById("addToOrderSensationButton");
+
+  $.getJSON("../data/pricing.json", function(data) {
+
+    let price = 0;
+
+    $.each(data["sensation"], function(key, value) {
+      if (selectedSize == key) {
+        price += value;
+      }
+    })
+
+    if (selectedBase.includes('$')) {
+      let re = /\$\d+(\.\d{2})?/;
+      let match = re.exec(selectedBase);
+      let amount = parseFloat(match[0].replace("$", ""));
+      price += amount;
+    }
+    addButton.innerHTML = "Add to Order - $" + (Math.round(price * 100) / 100);
   })
 }
 
@@ -15,8 +100,6 @@ if ($('#addToOrderCreateButton').length > 0) {
 // deleteButton.addEventListener("click", clearOrder);
 
 function addToOrder(type) {
-
-  console.log("Adding...");
 
   let selectedSize = document.getElementById("topRightSensationSize").value;
   let selectedBase = document.getElementById("topRightSensationBase").value;
