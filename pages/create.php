@@ -53,11 +53,11 @@
 							<p>79¢ each</p>
 							<div class = "mixins" id = "mixins">
 							</div>
-							<h2>Would you like a waffle bowl?</h2>
+							<h2 id = "waffleBowlQuestion">Would you like a waffle bowl?</h2>
 							<div id = "waffleSelect">
-								<input id = "waffle-yes" name = "waffle" type="radio" checked>
+								<input id = "waffle-yes" name = "waffle" type="radio"onchange="calculateCurrentCreatePrice();">
 								<label for = "waffle-yes">Yes</label>
-								<input id = "waffle-no" name = "waffle" type= "radio">
+								<input id = "waffle-no" name = "waffle" type= "radio" checked = "checked" onchange="calculateCurrentCreatePrice();">
 								<label for = "waffle-no">No</label>
 							</div>
 							<br>

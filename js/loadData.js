@@ -48,7 +48,7 @@ function createMixinData(jsonFile) {
 
     for (mixin of mixins) {
       tmp += '<div class = "mixin" onclick="this.querySelector(\'input[type=checkbox]\' style=\'pointer-events:none\').click()">';
-      tmp += '<input type = "checkbox" name = "mixin" id = "' + mixin + '">';
+      tmp += '<input type = "checkbox" name = "mixin" id = "' + mixin + '" onchange="calculateCurrentCreatePrice();">';
       tmp += '<label for = "' + mixin + '">' + mixin + '</label>';
       tmp += '</div>';
     }

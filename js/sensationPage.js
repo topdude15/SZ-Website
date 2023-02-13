@@ -24,13 +24,9 @@ if ($('#addToOrderCreateButton').length > 0) {
   base.addEventListener("change", function() {
     calculateCurrentCreatePrice();
   })
-  let mixins = document.querySelectorAll("input[name=mixin]");
-  console.log("Selected all mixins");
-  mixins.forEach(function(mixin) {
-    console.log("addiung");
-    mixin.addEventListener("change", function() {
-      calculateCurrentCreatePrice();
-    })
+  let waffleBowlQuestion = document.getElementById("waffleBowlQuestion");
+  $.getJSON("../data/pricing.json", function(data) {
+      waffleBowlQuestion.innerHTML = "Would you like a waffle bowl? (+$" + data["waffle"] + ")";
   })
 }
 
@@ -61,6 +57,9 @@ function calculateCurrentCreatePrice() {
       let match = re.exec(selectedBase);
       let amount = parseFloat(match[0].replace("$", ""));
       price += amount;
+    }
+    if (waffleSelection) {
+      price += data["waffle"];
     }
     for(i = 0; i < mixins.length; i++) {
       price += data["mixin"];
