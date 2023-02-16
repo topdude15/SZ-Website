@@ -26,7 +26,7 @@ if ($('#addToOrderCreateButton').length > 0) {
   })
   let waffleBowlQuestion = document.getElementById("waffleBowlQuestion");
   $.getJSON("../data/pricing.json", function(data) {
-      waffleBowlQuestion.innerHTML = "Would you like a waffle bowl? (+$" + data["waffle"] + ")";
+    waffleBowlQuestion.innerHTML = "Would you like a waffle bowl? (+$" + data["waffle"] + ")";
   })
 }
 
@@ -175,11 +175,19 @@ function addToOrder(type) {
         let amount = parseFloat(match[0].replace("$", ""));
         price += amount;
       }
+      for(i = 0; i < mixins.length; i++) {
+        console.log("adding mixin")
+        price += data["mixin"];
+      }
+      if (waffleSelection) {
+        price += data["waffle"];
+      }
       if (currentData == null) {
         const newOrderId = revisedRandId();
         const order = {"orderId": newOrderId, "orderItems": [{"itemType": "create", "itemSize": selectedSize, "itemPrice": price, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors}]};
         sessionStorage.setItem("szOrder", JSON.stringify(order));
       } else {
+        console.log("Adding to order...");
         var order = JSON.parse(currentData);
         order.orderItems.push({"itemType": "create", "itemPrice": price, "itemSize": selectedSize, "itemBase": selectedBase, "includeWaffle": waffleSelection, "mixins": mixins, "flavors": flavors});
         sessionStorage.setItem("szOrder", JSON.stringify(order));
